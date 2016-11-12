@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
-		C7D41DA91DD6E221008D0402 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* FirstViewController.swift */; };
+		C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */; };
 		C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */; };
 		C7D41DAE1DD6E221008D0402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DAC1DD6E221008D0402 /* Main.storyboard */; };
 		C7D41DB01DD6E221008D0402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DAF1DD6E221008D0402 /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 		C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnnct.release.xcconfig"; path = "Pods/Target Support Files/Pods-cnnct/Pods-cnnct.release.xcconfig"; sourceTree = "<group>"; };
 		C7D41DA31DD6E221008D0402 /* cnnct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnnct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DA61DD6E221008D0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7D41DA81DD6E221008D0402 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C7D41DAD1DD6E221008D0402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7D41DAF1DD6E221008D0402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */,
 				C7D41DA61DD6E221008D0402 /* AppDelegate.swift */,
 				C7D41DD61DD7AAEA008D0402 /* TagListView.swift */,
-				C7D41DA81DD6E221008D0402 /* FirstViewController.swift */,
+				C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */,
 				C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */,
 				C7D41DAC1DD6E221008D0402 /* Main.storyboard */,
 				C7D41DAF1DD6E221008D0402 /* Assets.xcassets */,
@@ -385,7 +385,7 @@
 				C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
 				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
-				C7D41DA91DD6E221008D0402 /* FirstViewController.swift in Sources */,
+				C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
