@@ -22,28 +22,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-yV-ct1">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYH-yV-ct1">
                                 <rect key="frame" x="16" y="72" width="343" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg1-b7-Odm">
-                                <rect key="frame" x="164" y="558" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sg1-b7-Odm">
+                                <rect key="frame" x="0.0" y="565" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GLv-qG-MLq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5hw-cz-Yht"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Sg1-b7-Odm" firstAttribute="top" secondItem="VYH-yV-ct1" secondAttribute="bottom" constant="56" id="8Xe-cQ-NDl"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Sg1-b7-Odm" secondAttribute="bottom" id="CAc-GB-AXS"/>
+                            <constraint firstItem="Sg1-b7-Odm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Px2-0O-auO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VYH-yV-ct1" secondAttribute="leading" id="ZAI-kw-Sdc"/>
                             <constraint firstItem="VYH-yV-ct1" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="eUB-XT-cVt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VYH-yV-ct1" secondAttribute="trailing" id="pnq-UK-FBu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sg1-b7-Odm" secondAttribute="trailing" constant="-16" id="vYk-Hd-o0I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick Your Event Interests" id="gyh-PL-26v"/>
                     <connections>
                         <outlet property="tagListView" destination="VYH-yV-ct1" id="Hdj-s2-NDj"/>
+                        <outlet property="updateButton" destination="Sg1-b7-Odm" id="Cjg-xq-M8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
