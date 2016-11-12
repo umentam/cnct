@@ -37,12 +37,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick Your Event Interests" id="gyh-PL-26v"/>
+                    <connections>
+                        <outlet property="tagListView" destination="VYH-yV-ct1" id="Hdj-s2-NDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.8" y="-666.11694152923542"/>
         </scene>
-        <!--People-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +80,8 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" image="Conference" id="cPa-gy-q4n">
+                    <tabBarItem key="tabBarItem" title="" image="Conference" id="cPa-gy-q4n">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1084" y="171"/>
         </scene>
-        <!--Profile-->
+        <!--View Controller-->
         <scene sceneID="C2d-vY-99D">
             <objects>
                 <viewController id="TTg-a9-GaV" sceneMemberID="viewController">
@@ -103,7 +107,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Contacts" id="Aeq-sh-6UV">
+                    <tabBarItem key="tabBarItem" title="" image="Contacts" id="Aeq-sh-6UV">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.0078431372549019607" green="0.81568627450980391" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="-75" y="859"/>
         </scene>
-        <!--Messages-->
+        <!--View Controller-->
         <scene sceneID="X4y-IU-23W">
             <objects>
                 <viewController id="qYZ-xM-3Vo" sceneMemberID="viewController">
@@ -129,7 +134,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="New Post" id="TwN-7q-0Yn">
+                    <tabBarItem key="tabBarItem" title="" image="New Post" id="TwN-7q-0Yn">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,11 +314,12 @@
             </objects>
             <point key="canvasLocation" x="-1" y="-734"/>
         </scene>
-        <!--Interests-->
+        <!--Navigation Controller-->
         <scene sceneID="TYU-oj-bze">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Shl-Su-MdH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Interests" image="Activity Feed" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" title="" image="Price Tag" id="acW-dT-cKf">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,10 +342,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Activity Feed" width="37" height="37"/>
         <image name="Conference" width="37" height="37"/>
         <image name="Contacts" width="37" height="37"/>
         <image name="New Post" width="37" height="37"/>
+        <image name="Price Tag" width="37" height="37"/>
     </resources>
     <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>
