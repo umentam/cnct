@@ -72,7 +72,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
                     var data = result as! [String:Any]
                     print ("WE ARE SUCCESSFUL")
                     print(data["email"]!)
-                    self?.ref.child("Users").child((user?.uid)!).setValue(["name": data["name"]!, "email": data["email"]!])
+                    self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!])
                 }
             }
         }
