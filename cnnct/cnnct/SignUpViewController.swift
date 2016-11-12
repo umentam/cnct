@@ -20,20 +20,24 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
     @IBOutlet weak var accountCreationIndicator: UIActivityIndicatorView!
     @IBOutlet weak var schoolChoice: UITextField!
     
+    var ref:FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ref = FIRDatabase.database().reference()
+        var loginButton = FBSDKLoginButton()
+        loginButton.delegate = self
+        loginButton.center = self.view.center
+        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        self.view.addSubview(loginButton)
         
         if (FBSDKAccessToken.current() != nil) {
             // User is logged in, do work such as go to next view controller.
             print("the user is already logged in.")
         }
         else {
-            var loginButton = FBSDKLoginButton()
-            loginButton.delegate = self
-            loginButton.center = self.view.center
-            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-            self.view.addSubview(loginButton)
+    
         }
         
     }
@@ -47,12 +51,13 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
     public func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if let error = error {
             print(error.localizedDescription)
+            print("Had an error loggin in")
             return
         }
         let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
             // ...
-            print("I was able to sign in successfully!")
+            print("Logged in successfully!")
         }
         // ...
     }

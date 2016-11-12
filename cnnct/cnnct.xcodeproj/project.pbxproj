@@ -67,6 +67,7 @@
 		DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		DD9B7F391DD7ADA20011A589 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cnnct.entitlements; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +130,7 @@
 		C7D41DA51DD6E221008D0402 /* cnnct */ = {
 			isa = PBXGroup;
 			children = (
+				DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */,
 				C7D41DA61DD6E221008D0402 /* AppDelegate.swift */,
 				C7D41DD61DD7AAEA008D0402 /* TagListView.swift */,
 				C7D41DA81DD6E221008D0402 /* FirstViewController.swift */,
@@ -257,6 +259,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = M5MDUJN294;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					C7D41DB81DD6E221008D0402 = {
 						CreatedOnToolsVersion = 8.1;
@@ -529,6 +536,7 @@
 			baseConfigurationReference = 0DA48753FB175B1DB8692F16 /* Pods-cnnct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cnnct/cnnct.entitlements;
 				DEVELOPMENT_TEAM = M5MDUJN294;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -549,6 +557,7 @@
 			baseConfigurationReference = C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cnnct/cnnct.entitlements;
 				DEVELOPMENT_TEAM = M5MDUJN294;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
