@@ -20,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FIRApp.configure()
+        
+//        let userCurrent = FBSDKAccessToken.current()
+//        if(userCurrent == nil) {
+//            print("the user is already logged in")
+//            let storyBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: Bundle.main)
+//            let signUpViewController: SignUpViewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+//            
+//            window?.rootViewController = signUpViewController
+//
+//        } else {
+//            print("the user is not logged in")
+//        }
+        
         return true
     }
     
