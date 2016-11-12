@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
 		C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */; };
-		C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */; };
+		C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */; };
 		C7D41DAE1DD6E221008D0402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DAC1DD6E221008D0402 /* Main.storyboard */; };
 		C7D41DB01DD6E221008D0402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DAF1DD6E221008D0402 /* Assets.xcassets */; };
 		C7D41DB31DD6E221008D0402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DB11DD6E221008D0402 /* LaunchScreen.storyboard */; };
 		C7D41DBE1DD6E222008D0402 /* cnnctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DBD1DD6E222008D0402 /* cnnctTests.swift */; };
 		C7D41DC91DD6E222008D0402 /* cnnctUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */; };
 		C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD61DD7AAEA008D0402 /* TagListView.swift */; };
+		C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */; };
+		C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */; };
 		DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */; };
 		DD9B7F371DD7AD970011A589 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */; };
 		DD9B7F3B1DD7ADA20011A589 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */; };
@@ -50,7 +52,7 @@
 		C7D41DA31DD6E221008D0402 /* cnnct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnnct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DA61DD6E221008D0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		C7D41DAD1DD6E221008D0402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7D41DAF1DD6E221008D0402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7D41DB21DD6E221008D0402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cnnctUITests.swift; sourceTree = "<group>"; };
 		C7D41DCA1DD6E222008D0402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D41DD61DD7AAEA008D0402 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -134,13 +138,15 @@
 				C7D41DA61DD6E221008D0402 /* AppDelegate.swift */,
 				C7D41DD61DD7AAEA008D0402 /* TagListView.swift */,
 				C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */,
-				C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */,
+				C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */,
 				C7D41DAC1DD6E221008D0402 /* Main.storyboard */,
 				C7D41DAF1DD6E221008D0402 /* Assets.xcassets */,
 				C7D41DB11DD6E221008D0402 /* LaunchScreen.storyboard */,
 				DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */,
 				C7D41DB41DD6E221008D0402 /* Info.plist */,
 				DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */,
+				C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */,
+				C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -381,9 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */,
 				C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */,
-				C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */,
+				C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
+				C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */,
 				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
 				C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */,
 			);
