@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E092BC11DD78E5200C6083C /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BC01DD78E5200C6083C /* MLPAutoCompleteTextField.m */; };
+		8E092BC71DD78F3400C6083C /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BC61DD78F3400C6083C /* NSString+Levenshtein.m */; };
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
 		C7D41DA91DD6E221008D0402 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* FirstViewController.swift */; };
 		C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */; };
@@ -40,6 +42,14 @@
 /* Begin PBXFileReference section */
 		0DA48753FB175B1DB8692F16 /* Pods-cnnct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnnct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cnnct/Pods-cnnct.debug.xcconfig"; sourceTree = "<group>"; };
 		170D812473747FF7D4C6184A /* Pods_cnnctUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E092BBE1DD78E1D00C6083C /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		8E092BBF1DD78E5200C6083C /* cnnct-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cnnct-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E092BC01DD78E5200C6083C /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		8E092BC21DD78E7C00C6083C /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		8E092BC31DD78ECD00C6083C /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		8E092BC41DD78EED00C6083C /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		8E092BC51DD78F1500C6083C /* NSString+Levenshtein.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		8E092BC61DD78F3400C6083C /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnnct.release.xcconfig"; path = "Pods/Target Support Files/Pods-cnnct/Pods-cnnct.release.xcconfig"; sourceTree = "<group>"; };
 		C7D41DA31DD6E221008D0402 /* cnnct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnnct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DA61DD6E221008D0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +97,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E092BBD1DD78DC000C6083C /* AutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				8E092BBE1DD78E1D00C6083C /* MLPAutoCompleteTextField.h */,
+				8E092BC01DD78E5200C6083C /* MLPAutoCompleteTextField.m */,
+				8E092BBF1DD78E5200C6083C /* cnnct-Bridging-Header.h */,
+				8E092BC21DD78E7C00C6083C /* MLPAutoCompleteTextFieldDataSource.h */,
+				8E092BC31DD78ECD00C6083C /* MLPAutoCompleteTextFieldDelegate.h */,
+				8E092BC41DD78EED00C6083C /* MLPAutoCompletionObject.h */,
+				8E092BC51DD78F1500C6083C /* NSString+Levenshtein.h */,
+				8E092BC61DD78F3400C6083C /* NSString+Levenshtein.m */,
+			);
+			name = AutoComplete;
+			sourceTree = "<group>";
+		};
 		C7D41D9A1DD6E221008D0402 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +138,7 @@
 		C7D41DA51DD6E221008D0402 /* cnnct */ = {
 			isa = PBXGroup;
 			children = (
+				8E092BBD1DD78DC000C6083C /* AutoComplete */,
 				C7D41DA61DD6E221008D0402 /* AppDelegate.swift */,
 				C7D41DA81DD6E221008D0402 /* FirstViewController.swift */,
 				C7D41DAA1DD6E221008D0402 /* SecondViewController.swift */,
@@ -234,6 +260,7 @@
 					C7D41DA21DD6E221008D0402 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = M5MDUJN294;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					C7D41DB81DD6E221008D0402 = {
@@ -354,7 +381,9 @@
 			files = (
 				C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
+				8E092BC71DD78F3400C6083C /* NSString+Levenshtein.m in Sources */,
 				C7D41DA91DD6E221008D0402 /* FirstViewController.swift in Sources */,
+				8E092BC11DD78E5200C6083C /* MLPAutoCompleteTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,11 +534,15 @@
 			baseConfigurationReference = 0DA48753FB175B1DB8692F16 /* Pods-cnnct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M5MDUJN294;
 				INFOPLIST_FILE = cnnct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = awm.cnnct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cnnct/cnnct-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -520,11 +553,14 @@
 			baseConfigurationReference = C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = M5MDUJN294;
 				INFOPLIST_FILE = cnnct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = awm.cnnct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cnnct/cnnct-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
