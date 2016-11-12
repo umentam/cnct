@@ -107,7 +107,7 @@ class FirstViewController: UIViewController {
                 {
                     color = UIColor(red: 184/255, green: 205/255, blue: 158/255, alpha: 1)
                 }
-                self.newTagListView.addTag(text: i, target: self, tapAction: #selector(FirstViewController.tap(_:)),backgroundColor: color,textColor: UIColor.whiteColor())
+                //self.newTagListView.addTag(text: i, target: self, tapAction: #selector(FirstViewController.tap(_:)),backgroundColor: color,textColor: UIColor.whiteColor())
             }
         })
         
