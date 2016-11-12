@@ -15,6 +15,7 @@
 		C7D41DB31DD6E221008D0402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D41DB11DD6E221008D0402 /* LaunchScreen.storyboard */; };
 		C7D41DBE1DD6E222008D0402 /* cnnctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DBD1DD6E222008D0402 /* cnnctTests.swift */; };
 		C7D41DC91DD6E222008D0402 /* cnnctUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */; };
+		DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */; };
 		DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */; };
 		DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DDEB62301DD6E8A400B3DA4A /* Podfile */; };
 		FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */; };
@@ -55,6 +56,7 @@
 		C7D41DC41DD6E222008D0402 /* cnnctUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cnnctUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cnnctUITests.swift; sourceTree = "<group>"; };
 		C7D41DCA1DD6E222008D0402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				C7D41DB11DD6E221008D0402 /* LaunchScreen.storyboard */,
 				DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */,
 				C7D41DB41DD6E221008D0402 /* Info.plist */,
+				DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
+				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
 				C7D41DA91DD6E221008D0402 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
