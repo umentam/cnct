@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M2h-I2-JWz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -187,9 +187,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cnnct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-y2-6Ro">
-                                <rect key="frame" x="129.5" y="50" width="116.5" height="54"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cnct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-y2-6Ro">
+                                <rect key="frame" x="143.5" y="120" width="89" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
                                 <color key="textColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -214,17 +214,25 @@
                                     <action selector="viewPolicy:" destination="M2h-I2-JWz" eventType="touchUpInside" id="N1q-Ka-42s"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Meaningful Connections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40X-eb-UDm">
+                                <rect key="frame" x="71" y="194" width="232" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hCH-D6-JMy" firstAttribute="top" secondItem="SSI-GD-7RC" secondAttribute="bottom" id="2jA-0p-j3s"/>
                             <constraint firstItem="T7B-y2-6Ro" firstAttribute="centerX" secondItem="gXZ-Xh-mqx" secondAttribute="centerX" id="5nQ-B1-JDL"/>
-                            <constraint firstItem="T7B-y2-6Ro" firstAttribute="top" secondItem="SSI-GD-7RC" secondAttribute="bottom" constant="30" id="VF1-cr-1Ha"/>
+                            <constraint firstItem="T7B-y2-6Ro" firstAttribute="top" secondItem="SSI-GD-7RC" secondAttribute="bottom" constant="100" id="VF1-cr-1Ha"/>
+                            <constraint firstItem="40X-eb-UDm" firstAttribute="top" secondItem="T7B-y2-6Ro" secondAttribute="bottom" constant="20" id="ZQ3-as-HBo"/>
                             <constraint firstAttribute="leadingMargin" secondItem="pWc-fb-dKT" secondAttribute="leading" id="Zfs-Mv-zMI"/>
                             <constraint firstItem="Ng0-5f-f2E" firstAttribute="top" secondItem="pWc-fb-dKT" secondAttribute="bottom" constant="5" id="b81-Ae-PzX"/>
                             <constraint firstItem="qub-Oo-bz8" firstAttribute="top" secondItem="Ng0-5f-f2E" secondAttribute="bottom" constant="10" id="bma-bT-mQW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pWc-fb-dKT" secondAttribute="trailing" id="eI4-2d-lx3"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hCH-D6-JMy" secondAttribute="leading" id="gjF-Zb-GZl"/>
+                            <constraint firstItem="40X-eb-UDm" firstAttribute="centerX" secondItem="gXZ-Xh-mqx" secondAttribute="centerX" id="kk2-HQ-n4K"/>
                             <constraint firstItem="Ng0-5f-f2E" firstAttribute="centerX" secondItem="gXZ-Xh-mqx" secondAttribute="centerX" id="nhm-qF-kGd"/>
                         </constraints>
                     </view>
