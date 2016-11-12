@@ -23,15 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0)
         let userCurrent = FBSDKAccessToken.current()
         if(userCurrent == nil) {
-            print("the user is already logged in")
             let storyBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: Bundle.main)
             let signUpViewController: SignUpViewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
             
             window?.rootViewController = signUpViewController
 
         } else {
-            print("the user is not logged in")
-        }        
+        }
         return true
     }
     
