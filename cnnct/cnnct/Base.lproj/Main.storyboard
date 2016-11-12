@@ -97,7 +97,7 @@
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Xd-Ep-Xj2">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="cyL-4z-OpN"/>
+                        <barButtonItem key="rightBarButtonItem" image="Exit" id="cyL-4z-OpN"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LB8-df-rBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,6 +315,7 @@
     <resources>
         <image name="Conference" width="37" height="37"/>
         <image name="Contacts" width="37" height="37"/>
+        <image name="Exit" width="37" height="37"/>
         <image name="New Post" width="37" height="37"/>
         <image name="Price Tag" width="37" height="37"/>
     </resources>

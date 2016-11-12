@@ -106,6 +106,11 @@ class InterestsViewController: UIViewController {
     
    
     @IBAction func updateClicked(_ sender: Any) {
+        let myAlertController = UIAlertController(title: "Updated!", message:
+            nil, preferredStyle: UIAlertControllerStyle.alert)
+        self.present(myAlertController, animated: true, completion: { () -> Void in
+            myAlertController.dismiss(animated: true, completion:nil)
+        })
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
