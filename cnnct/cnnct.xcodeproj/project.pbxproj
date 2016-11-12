@@ -17,6 +17,10 @@
 		C7D41DC91DD6E222008D0402 /* cnnctUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */; };
 		C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD61DD7AAEA008D0402 /* TagListView.swift */; };
 		DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */; };
+		DD9B7F371DD7AD970011A589 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */; };
+		DD9B7F3B1DD7ADA20011A589 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */; };
+		DD9B7F3C1DD7ADA20011A589 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F391DD7ADA20011A589 /* FBSDKCoreKit.framework */; };
+		DD9B7F3D1DD7ADA20011A589 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */; };
 		DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */; };
 		DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DDEB62301DD6E8A400B3DA4A /* Podfile */; };
 		FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */; };
@@ -59,6 +63,10 @@
 		C7D41DCA1DD6E222008D0402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D41DD61DD7AAEA008D0402 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DD9B7F391DD7ADA20011A589 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9B7F3D1DD7ADA20011A589 /* Bolts.framework in Frameworks */,
+				DD9B7F371DD7AD970011A589 /* FBSDKShareKit.framework in Frameworks */,
+				DD9B7F3C1DD7ADA20011A589 /* FBSDKCoreKit.framework in Frameworks */,
 				FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */,
+				DD9B7F3B1DD7ADA20011A589 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +164,10 @@
 		CC960F202C24BBF81E088B8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */,
+				DD9B7F391DD7ADA20011A589 /* FBSDKCoreKit.framework */,
+				DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */,
+				DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */,
 				EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */,
 				E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */,
 				170D812473747FF7D4C6184A /* Pods_cnnctUITests.framework */,
@@ -514,6 +530,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M5MDUJN294;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = cnnct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -530,6 +550,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = M5MDUJN294;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = cnnct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
