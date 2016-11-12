@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FBSDKCoreKit
 
 class InterestsViewController: UIViewController {
     
@@ -77,7 +78,10 @@ class InterestsViewController: UIViewController {
             }
         })
         
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        //let thisUserID = userCurrent?.userID
         
+        print(userID)
     }
     
     //Method to ensure you have deselected.
@@ -106,12 +110,30 @@ class InterestsViewController: UIViewController {
     
    
     @IBAction func updateClicked(_ sender: Any) {
-        let myAlertController = UIAlertController(title: "Updated!", message:
-            nil, preferredStyle: UIAlertControllerStyle.alert)
-        self.present(myAlertController, animated: true, completion: { () -> Void in
-            myAlertController.dismiss(animated: true, completion:nil)
-        })
-    }
+        if !(mainSet.isEmpty) {
+            let preferences = mainSet
+            
+            //let userCurrent = FBSDKAccessToken.current()
+            let userID = FIRAuth.auth()?.currentUser?.uid
+            
+            for object in preferences {
+                self.ref.child("Users").child(userID!).child("preferences").updateChildValues([object:true])
+            }
+            let myAlertController = UIAlertController(title: "Updated!", message:
+                nil, preferredStyle: UIAlertControllerStyle.alert)
+            self.present(myAlertController, animated: true, completion: { () -> Void in
+                myAlertController.dismiss(animated: true, completion:nil)
+            })
+
+        }
+        else {
+            let alertController = UIAlertController(title: "Hi :)", message:
+                "Please pick some tags for us to better understand who to connect you with.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+            }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

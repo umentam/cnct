@@ -97,7 +97,11 @@
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Xd-Ep-Xj2">
-                        <barButtonItem key="rightBarButtonItem" image="Exit" id="cyL-4z-OpN"/>
+                        <barButtonItem key="rightBarButtonItem" image="Exit" id="cyL-4z-OpN">
+                            <connections>
+                                <action selector="signOut:" destination="TTg-a9-GaV" id="pb3-EP-kt5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LB8-df-rBh" userLabel="First Responder" sceneMemberID="firstResponder"/>

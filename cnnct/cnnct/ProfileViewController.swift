@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
 
@@ -24,6 +26,9 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signOut(_ sender: Any) {
+        FBSDKLoginManager().logOut()
+    }
 
     /*
     // MARK: - Navigation
