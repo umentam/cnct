@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TQa-HX-2S7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U9b-aq-FVv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -120,39 +120,6 @@
             </objects>
             <point key="canvasLocation" x="836" y="913"/>
         </scene>
-        <!--Auto Complete Delegate-->
-        <scene sceneID="bPg-4B-ik7">
-            <objects>
-                <viewController id="TQa-HX-2S7" customClass="SearchViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="q0R-U8-0LQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="2OB-QS-0fE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aZ4-5P-ekw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eaw-Ia-hcf" customClass="MLPAutoCompleteTextField">
-                                <frame key="frameInset" minX="93" minY="286" width="189" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="Search For an Event"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="autoCompleteDataSource" destination="aZ4-5P-ekw" id="VvU-1l-P86"/>
-                                    <outlet property="autoCompleteDelegate" destination="TQa-HX-2S7" id="Ad8-vo-HQ7"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S2B-hh-jMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="xC8-Xw-t94" customClass="SearchDataSource"/>
-            </objects>
-            <point key="canvasLocation" x="-1191.2" y="-0.44977511244377816"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -173,6 +140,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Auto Complete Delegate-->
+        <scene sceneID="l2W-OY-EVd">
+            <objects>
+                <viewController id="U9b-aq-FVv" customClass="GPCMLPAutoCompleteDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wgp-eh-1Ze"/>
+                        <viewControllerLayoutGuide type="bottom" id="tYe-xe-LWr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DY7-Cv-C0d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ce-tc-46n" customClass="MLPAutoCompleteTextField">
+                                <frame key="frameInset" minX="45.893333333335704" minY="320.52000000000021" width="279.99999999999977" height="30.000000000000149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="autoCompleteDataSource" destination="Xpi-49-fmc" id="BeU-nZ-nBg"/>
+                                    <outlet property="autoCompleteDelegate" destination="U9b-aq-FVv" id="d32-Hl-BHY"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hb9-LZ-uNz" sceneMemberID="firstResponder"/>
+                <customObject id="Xpi-49-fmc" customClass="DEMODataSource"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
