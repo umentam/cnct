@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class SignUpViewController: UIViewController {
     
@@ -20,6 +21,19 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if (FBSDKAccessToken.current() != nil) {
+            // User is logged in, do work such as go to next view controller.
+            print("the user is already logged in.")
+        }
+        else {
+            var loginButton = FBSDKLoginButton()
+            loginButton.center = self.view.center
+            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+            self.view.addSubview(loginButton)
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
