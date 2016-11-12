@@ -35,7 +35,7 @@ class InterestsViewController: UIViewController {
         newTagListView.layer.borderColor = UIColor.white.cgColor
         newTagListView.layer.borderWidth = 0.2
         
-        updateButton.backgroundColor = UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0)
+        //updateButton.backgroundColor = UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0)
         //updateButton.setImage(UIImage(named: "update"), for: UIControlState.normal)
         
         
