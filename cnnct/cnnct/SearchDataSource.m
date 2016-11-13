@@ -38,12 +38,16 @@
 
 #pragma mark - MLPAutoCompleteTextField DataSource
 
+- (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField willHideAutoCompleteTableView:(UITableView *)autoCompleteTableView {
+    NSLog(@"Autocomplete table view will be removed from the view hierarchy");
+}
 
 //example of asynchronous fetch:
 - (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
  possibleCompletionsForString:(NSString *)string
             completionHandler:(void (^)(NSArray *))handler
 {
+    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     dispatch_async(queue, ^{
         if(self.simulateLatency){
