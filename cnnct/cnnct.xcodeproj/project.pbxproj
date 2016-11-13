@@ -26,6 +26,8 @@
 		C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */; };
 		C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */; };
 		C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */; };
+		DD02EE871DD81E0400EED5C2 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02EE861DD81E0400EED5C2 /* MessagesTableViewController.swift */; };
+		DD02EE891DD81E1F00EED5C2 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02EE881DD81E1F00EED5C2 /* MessagesTableViewCell.swift */; };
 		DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */; };
 		DD9B7F371DD7AD970011A589 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */; };
 		DD9B7F3B1DD7ADA20011A589 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */; };
@@ -93,6 +95,8 @@
 		C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		DD02EE861DD81E0400EED5C2 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		DD02EE881DD81E1F00EED5C2 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */,
 				C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */,
 				C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */,
+				DD02EE861DD81E0400EED5C2 /* MessagesTableViewController.swift */,
+				DD02EE881DD81E1F00EED5C2 /* MessagesTableViewCell.swift */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -445,6 +451,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */,
+				DD02EE871DD81E0400EED5C2 /* MessagesTableViewController.swift in Sources */,
+				DD02EE891DD81E1F00EED5C2 /* MessagesTableViewCell.swift in Sources */,
 				C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
 				8E092C001DD7E02D00C6083C /* SearchAutoCompleteObject.m in Sources */,

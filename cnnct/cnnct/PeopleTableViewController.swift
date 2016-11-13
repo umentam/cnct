@@ -26,7 +26,7 @@ class PeopleTableViewController: UITableViewController {
             downLoadState
         })
         
-        self.navigationController?.navigationBar.topItem?.title = "Pick People To Connect With"
+        self.navigationController?.navigationBar.topItem?.title = "Connect with Attendees"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
         
     }
@@ -115,7 +115,7 @@ class PeopleTableViewController: UITableViewController {
             interestArray +=  rest.key + ", "
         }
         
-        cell.Interests?.text = interestArray
+        cell.Interests?.text = String(interestArray.characters.dropLast())
         
         return cell
     }
