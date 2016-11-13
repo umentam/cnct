@@ -11,14 +11,29 @@
 #import "SearchDataSource.h"
 #import "SearchAutoCompleteObject.h"
 
-@interface SearchDataSource ()
+@import Firebase;
+@import FirebaseStorage;
+
+@interface SearchDataSource()
+{
+    NSMutableArray *_strings;
+}
 
 @property (strong, nonatomic) NSArray *searchObjects;
+
 
 @end
 
 
 @implementation SearchDataSource
+
+-(void)awakeFromNib{
+    
+    _strings = [NSMutableArray new];
+    [super awakeFromNib];
+    [self loadEvents];
+    
+}
 
 
 #pragma mark - MLPAutoCompleteTextField DataSource
@@ -49,6 +64,21 @@
     });
 }
 
+-(void)loadEvents{
+    
+    FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+    FIRDatabaseQuery *eventsQuery = [ref child:@"Events"];
+    [[eventsQuery queryOrderedByKey] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapShot){
+        
+        for(FIRDataSnapshot *child in snapShot.children){
+            
+            NSDictionary *eventData = child.value;
+            NSString *eventName = eventData[@"eventName"];
+            [_strings addObject:eventName];
+            
+        }
+    }];
+}
 /*
  - (NSArray *)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
  possibleCompletionsForString:(NSString *)string
@@ -88,16 +118,9 @@
 }
 
 
-- (NSArray *)allStrings
-{
-    NSArray *strings =
-    @[
-      @"Anthony",
-      @"Michael",
-      @"Githiora"
-      ];
+- (NSArray *)allStrings{
     
-    return strings;
+    return _strings;
 }
 
 
