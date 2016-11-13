@@ -13,13 +13,12 @@ import FBSDKCoreKit
 
 class InterestsViewController: UIViewController {
     
-    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var tagListView: UIView!
     var newTagListView:TagListView!
     var mainSet:Set<String> = Set([])
     var tagsDict = [String:Int]()
-    
+    var eventID:String = ""
     var prefTags = [String]()
     var ref:FIRDatabaseReference!
     
@@ -28,7 +27,6 @@ class InterestsViewController: UIViewController {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
         
-        loadingView.hidesWhenStopped = true
         
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.topItem?.title = "Pick Your Event Interests"
@@ -51,8 +49,11 @@ class InterestsViewController: UIViewController {
         
         eventTagsQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
             for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
+                //eventID = rest.key
                 let newQuery = self.ref.child("Events").child(rest.key).child("eventTags")
                 newQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
+                    self.tagsDict = snapshot.value as! [String : Int]
+                    
                     for newRest in snapshot.children.allObjects as! [FIRDataSnapshot] {
                         self.prefTags.append(newRest.key)
                     }
@@ -75,7 +76,10 @@ class InterestsViewController: UIViewController {
                         {
                             color = UIColor(red: 184/255, green: 205/255, blue: 158/255, alpha: 1)
                         }
-                        self.newTagListView.addTag(text: i, target: self, tapAction: #selector(self.tap(sender:)), backgroundColor: color, textColor: UIColor.white)
+                        let finalText = self.tagsDict[i]
+                        
+                        let mainText = " \(i) (\(finalText!))"
+                        self.newTagListView.addTag(text: mainText, target: self, tapAction: #selector(self.tap(sender:)), backgroundColor: color, textColor: UIColor.white)
                         
                     }
                 })
@@ -115,6 +119,11 @@ class InterestsViewController: UIViewController {
             
             //let userCurrent = FBSDKAccessToken.current()
             let userID = FIRAuth.auth()?.currentUser?.uid
+            
+//            for object in self.tagsDict {
+//                self.ref.child("Events").child(self.eventID).child("eventTags").updateChildValues([object:true])
+//                
+//            }
             
             for object in preferences {
                 self.ref.child("Users").child(userID!).child("preferences").updateChildValues([object:true])
