@@ -106,6 +106,7 @@ class PeopleTableViewController: UITableViewController {
         cell.fullName?.text = (item.childSnapshot(forPath: "name").value as! String)
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
         
+        
 
         return cell
     }

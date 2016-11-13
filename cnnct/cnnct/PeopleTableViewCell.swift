@@ -9,9 +9,6 @@
 import UIKit
 
 class PeopleTableViewCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var profImage: UIImageView!
 
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var roleLabel: UILabel!

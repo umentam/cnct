@@ -13,6 +13,7 @@
 		8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFB1DD7E02D00C6083C /* SearchDataSource.m */; };
 		8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */; };
 		8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */; };
+		C76B85E81DD81FF300981D08 /* user-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B85E71DD81FF300981D08 /* user-outline.png */; };
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
 		C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */; };
 		C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */; };
@@ -74,6 +75,7 @@
 		8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoAppDelegate.m; sourceTree = "<group>"; };
 		8E092BFE1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCMLPAutoCompleteDemoViewController.h; sourceTree = "<group>"; };
 		8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoViewController.m; sourceTree = "<group>"; };
+		C76B85E71DD81FF300981D08 /* user-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-outline.png"; sourceTree = "<group>"; };
 		C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnnct.release.xcconfig"; path = "Pods/Target Support Files/Pods-cnnct/Pods-cnnct.release.xcconfig"; sourceTree = "<group>"; };
 		C7D41DA31DD6E221008D0402 /* cnnct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnnct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DA61DD6E221008D0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */,
 				C7D41DAC1DD6E221008D0402 /* Main.storyboard */,
 				C7D41DAF1DD6E221008D0402 /* Assets.xcassets */,
+				C76B85E71DD81FF300981D08 /* user-outline.png */,
 				C7D41DB11DD6E221008D0402 /* LaunchScreen.storyboard */,
 				DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */,
 				C7D41DB41DD6E221008D0402 /* Info.plist */,
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */,
+				C76B85E81DD81FF300981D08 /* user-outline.png in Resources */,
 				DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */,
 				C7D41DB31DD6E221008D0402 /* LaunchScreen.storyboard in Resources */,
 				C7D41DB01DD6E221008D0402 /* Assets.xcassets in Resources */,
