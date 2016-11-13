@@ -10,7 +10,7 @@
 		8E092BC11DD78E5200C6083C /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BC01DD78E5200C6083C /* MLPAutoCompleteTextField.m */; };
 		8E092BC71DD78F3400C6083C /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BC61DD78F3400C6083C /* NSString+Levenshtein.m */; };
 		8E092C001DD7E02D00C6083C /* SearchAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BF91DD7E02D00C6083C /* SearchAutoCompleteObject.m */; };
-		8E092C011DD7E02D00C6083C /* DEMODataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFB1DD7E02D00C6083C /* DEMODataSource.m */; };
+		8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFB1DD7E02D00C6083C /* SearchDataSource.m */; };
 		8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */; };
 		8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */; };
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
@@ -56,8 +56,8 @@
 		8E092BC61DD78F3400C6083C /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		8E092BF81DD7E02D00C6083C /* SearchAutoCompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAutoCompleteObject.h; sourceTree = "<group>"; };
 		8E092BF91DD7E02D00C6083C /* SearchAutoCompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAutoCompleteObject.m; sourceTree = "<group>"; };
-		8E092BFA1DD7E02D00C6083C /* DEMODataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMODataSource.h; sourceTree = "<group>"; };
-		8E092BFB1DD7E02D00C6083C /* DEMODataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMODataSource.m; sourceTree = "<group>"; };
+		8E092BFA1DD7E02D00C6083C /* SearchDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDataSource.h; sourceTree = "<group>"; };
+		8E092BFB1DD7E02D00C6083C /* SearchDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDataSource.m; sourceTree = "<group>"; };
 		8E092BFC1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCMLPAutoCompleteDemoAppDelegate.h; sourceTree = "<group>"; };
 		8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoAppDelegate.m; sourceTree = "<group>"; };
 		8E092BFE1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCMLPAutoCompleteDemoViewController.h; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 			children = (
 				8E092BF81DD7E02D00C6083C /* SearchAutoCompleteObject.h */,
 				8E092BF91DD7E02D00C6083C /* SearchAutoCompleteObject.m */,
-				8E092BFA1DD7E02D00C6083C /* DEMODataSource.h */,
-				8E092BFB1DD7E02D00C6083C /* DEMODataSource.m */,
+				8E092BFA1DD7E02D00C6083C /* SearchDataSource.h */,
+				8E092BFB1DD7E02D00C6083C /* SearchDataSource.m */,
 				8E092BFC1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.h */,
 				8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */,
 				8E092BFE1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.h */,
@@ -399,7 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E092C011DD7E02D00C6083C /* DEMODataSource.m in Sources */,
+				8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */,
 				C7D41DAB1DD6E221008D0402 /* SecondViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
 				8E092C001DD7E02D00C6083C /* SearchAutoCompleteObject.m in Sources */,

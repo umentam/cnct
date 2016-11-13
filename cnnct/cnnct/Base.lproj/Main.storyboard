@@ -168,7 +168,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb9-LZ-uNz" sceneMemberID="firstResponder"/>
-                <customObject id="Xpi-49-fmc" customClass="DEMODataSource"/>
+                <customObject id="Xpi-49-fmc" customClass="SearchDataSource"/>
             </objects>
         </scene>
     </scenes>
