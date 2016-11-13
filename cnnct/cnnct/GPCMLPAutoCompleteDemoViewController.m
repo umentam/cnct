@@ -14,6 +14,13 @@
 
 @implementation GPCMLPAutoCompleteDemoViewController
 
+
+- (IBAction)goToEventInterestsButton:(UIBarButtonItem *)sender {
+    
+    UIViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
