@@ -35,6 +35,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
         if (FBSDKAccessToken.current() != nil) {
             // User is logged in, do work such as go to next view controller.
             print("the user is already logged in.")
+            
         }
         else {
     
@@ -58,21 +59,33 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
             // ...
             print("Logged in successfully!")
-            let accessToken = FBSDKAccessToken.current()
             
-            
-            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters:["fields":"email,name"])
-            graphRequest?.start { [weak self] connection, result, error in
-                if error != nil {
-                    //onError()
+            let defaults = UserDefaults.standard
+            if(defaults.bool(forKey: "hasSignedUp")){
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InterestsViewController") as UIViewController
+                let navController = UINavigationController(rootViewController: viewController)
+                self.present(navController, animated: true, completion: nil)
 
-                    print(error)
-                    return
-                }else{
-                    var data = result as! [String:Any]
-                    print ("WE ARE SUCCESSFUL")
-                    print(data["email"]!)
-                    self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!])
+            }
+            else {
+                let accessToken = FBSDKAccessToken.current()
+                let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters:["fields":"email,name"])
+                graphRequest?.start { [weak self] connection, result, error in
+                    if error != nil {
+                        //onError()
+                        
+                        print(error)
+                        return
+                    }else{
+                        var data = result as! [String:Any]
+                        self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!])
+                        let defaults = UserDefaults.standard
+                        defaults.set(true, forKey: "hasSignedUp")
+                        
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SkillsViewController") as UIViewController
+                        let navController = UINavigationController(rootViewController: viewController)
+                        self?.present(navController, animated: true, completion: nil)
+                    }
                 }
             }
         }
