@@ -244,6 +244,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="autoCompleteTextField" destination="4ce-tc-46n" id="WSK-VH-ueB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb9-LZ-uNz" sceneMemberID="firstResponder"/>
                 <customObject id="Xpi-49-fmc" customClass="SearchDataSource"/>
