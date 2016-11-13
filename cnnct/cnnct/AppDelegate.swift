@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         FIRApp.configure()
+        UITabBar.appearance().tintColor = UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0)
+        let userCurrent = FBSDKAccessToken.current()
+        if(userCurrent == nil) {
+            let storyBoard: UIStoryboard = UIStoryboard(name:"Main", bundle: Bundle.main)
+            let signUpViewController: SignUpViewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+            
+            window?.rootViewController = signUpViewController
+
+        } else {
+        }
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -37,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
