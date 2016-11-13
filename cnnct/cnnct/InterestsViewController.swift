@@ -13,10 +13,13 @@ import FBSDKCoreKit
 
 class InterestsViewController: UIViewController {
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var tagListView: UIView!
     var newTagListView:TagListView!
     var mainSet:Set<String> = Set([])
+    var tagsDict = [String:Int]()
+    
     var prefTags = [String]()
     var ref:FIRDatabaseReference!
     

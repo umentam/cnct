@@ -130,9 +130,6 @@ class PeopleTableViewController: UITableViewController {
         let personInterestKey = personObject.key
         self.checkMyUserTree(myUID: myUserID!, otherUID: personInterestKey)
         sender.isEnabled = false
-        
-        
-       
     }
 
     //if first time
