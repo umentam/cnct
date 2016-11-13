@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MLPAutoCompleteTextField.h"
 
-@interface GPCMLPAutoCompleteDemoViewController : UIViewController <MLPAutoCompleteTextFieldDelegate>
+@interface GPCMLPAutoCompleteDemoViewController : UIViewController <UITextFieldDelegate,MLPAutoCompleteTextFieldDelegate>
 
 @end
