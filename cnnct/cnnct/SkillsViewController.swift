@@ -20,8 +20,7 @@ class SkillsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        FIRApp.configure()
+
         ref = FIRDatabase.database().reference()
         self.navigationController?.navigationBar.topItem?.title = "Your Role"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]

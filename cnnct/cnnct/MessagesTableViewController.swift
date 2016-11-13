@@ -7,17 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class MessagesTableViewController: UITableViewController {
+    
+    var ref = FIRDatabaseReference()
+    var attendees : [FIRDataSnapshot] = []
+    var interimUserIds = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.ref = FIRDatabase.database().reference()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        retrieveEventAttendees(completion: { (downLoadState) in
+            downLoadState
+        })
         
         self.navigationController?.navigationBar.topItem?.title = "Messages"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
@@ -31,13 +41,72 @@ class MessagesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        //#warning Incomplete implementation, return the number of sections
+        //return 1
+        var numOfSections: Int = 0
+        if attendees.count > 0
+        {
+            tableView.separatorStyle = .singleLine
+            numOfSections                = 1
+            tableView.backgroundView = nil
+        }
+        else
+        {
+            let noDataLabel: UILabel     = UILabel(frame: CGRect(0, 0, tableView.bounds.size.width, tableView.bounds.size.height))
+            noDataLabel.text             = "Not matched with any attendees. Go Match!"
+            noDataLabel.textColor        = UIColor.black
+            noDataLabel.textAlignment    = .center
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        return numOfSections
     }
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return attendees.count
+    }
+    
+    func retrieveEventAttendees(completion : (Bool) ->()) {
+        print("trying to get inside")
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        ref.child("Users").child(userID!).child("matchees").observeSingleEvent(of: .value, with: { (snapshot) in
+            print(snapshot.value)
+            for object in snapshot.children.allObjects as? [FIRDataSnapshot] ?? []{
+                self.interimUserIds.append(object.key)
+            }
+            for object in self.interimUserIds {
+                print ("trying to print the key")
+                print (object)
+                let attendeesQuery = self.ref.child("Users").child(object)
+                attendeesQuery.observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot)in
+                    print("i got inside of the attendees query")
+                    self.attendees.append(snapshot)
+                    self.tableView.reloadData()
+                })
+            }
+            
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        completion(true)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesTableViewCell", for: indexPath) as! MessagesTableViewCell
+        
+        //Fetches appropriate info for each followed org
+        var item : FIRDataSnapshot
+        item = self.attendees[indexPath.row]
+        
+        //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
+        cell.fullName?.text = (item.childSnapshot(forPath: "name").value as! String)
+        cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
+        
+        
+        return cell
     }
 
     /*
