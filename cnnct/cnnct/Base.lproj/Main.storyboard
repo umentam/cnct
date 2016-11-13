@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="generic-profile-pic" translatesAutoresizingMaskIntoConstraints="NO" id="yDS-GQ-2lH">
-                                <frame key="frameInset" minX="112" minY="100" width="150" height="128"/>
+                                <frame key="frameInset" minX="112" minY="100" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z87-bU-4bP">
@@ -362,16 +362,16 @@
         <scene sceneID="PFd-Nd-HJl">
             <objects>
                 <tableViewController storyboardIdentifier="MessagesTableViewController" id="FT4-6c-HF2" customClass="MessagesTableViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJW-Ut-CcS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJW-Ut-CcS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MessagesTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessagesTableViewCell" id="Eh3-iE-6VC" customClass="MessagesTableViewCell" customModule="cnnct" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="71"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eh3-iE-6VC" id="Zfv-6v-Hpg">
-                                    <frame key="frameInset" width="375" height="70"/>
+                                    <frame key="frameInset" width="375" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="messageProfile" image="user-outline.png" translatesAutoresizingMaskIntoConstraints="NO" id="EA0-Vh-Scw">

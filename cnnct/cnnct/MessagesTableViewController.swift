@@ -62,6 +62,9 @@ class MessagesTableViewController: UITableViewController {
             print("printing the last message")
             print(value)
             self.lastMessage = value! as! String
+            DispatchQueue.main.async(execute: {
+                self.tableView.reloadData()
+            });
             
         }) { (error) in
             print(error.localizedDescription)

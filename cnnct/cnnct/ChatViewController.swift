@@ -134,7 +134,8 @@ class ChatViewController: JSQMessagesViewController {
     override func textViewDidChange(_ textView: UITextView) {
         super.textViewDidChange(textView)
         // If the text is not empty, the user is typing
-        isTyping = textView.text != ""
+        //isTyping = textView.text != ""
+        isTyping = false
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
