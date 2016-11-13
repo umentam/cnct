@@ -22,7 +22,6 @@
 		C7D41DBE1DD6E222008D0402 /* cnnctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DBD1DD6E222008D0402 /* cnnctTests.swift */; };
 		C7D41DC91DD6E222008D0402 /* cnnctUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */; };
 		C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD61DD7AAEA008D0402 /* TagListView.swift */; };
-		C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */; };
 		C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */; };
 		C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */; };
 		C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */; };
@@ -89,7 +88,6 @@
 		C7D41DC81DD6E222008D0402 /* cnnctUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cnnctUITests.swift; sourceTree = "<group>"; };
 		C7D41DCA1DD6E222008D0402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D41DD61DD7AAEA008D0402 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
-		C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 				DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */,
 				C7D41DB41DD6E221008D0402 /* Info.plist */,
 				DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */,
-				C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */,
 				C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */,
 				C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */,
 				C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */,
@@ -453,15 +450,11 @@
 				C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */,
 				8E092BC11DD78E5200C6083C /* MLPAutoCompleteTextField.m in Sources */,
 				C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */,
-				C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */,
 				C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */,
-				
-				
 				C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */,
 				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
 				DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */,
 				C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */,
-				
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
