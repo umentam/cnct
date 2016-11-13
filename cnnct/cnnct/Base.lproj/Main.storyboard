@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RwW-BF-wms">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -120,12 +120,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-outline.png" translatesAutoresizingMaskIntoConstraints="NO" id="8gU-U4-qvS">
+                                            <frame key="frameInset" minX="22" minY="37" width="59" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Interests" destination="BZ0-mO-KRu" id="p0O-Hk-n6d"/>
                                     <outlet property="fullName" destination="87x-r0-Yvs" id="z7G-5x-BIo"/>
-                                    <outlet property="profImage" destination="g9R-sg-WUP" id="8dU-e1-GH4"/>
                                     <outlet property="roleLabel" destination="1mb-s0-g9g" id="KdC-Ry-DWV"/>
                                 </connections>
                             </tableViewCell>
@@ -181,18 +184,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="New Post" id="TwN-7q-0Yn">
-                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="7R4-E3-SNB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhJ-AS-mAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775.2" y="912.5937031484259"/>
+            <point key="canvasLocation" x="3653.5999999999999" y="912.5937031484259"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -212,7 +208,7 @@
                     <connections>
                         <segue destination="Shl-Su-MdH" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="dw5-hB-VAr" kind="relationship" relationship="viewControllers" id="gqy-3c-kES"/>
-                        <segue destination="qYZ-xM-3Vo" kind="relationship" relationship="viewControllers" id="wTU-ee-ZZS"/>
+                        <segue destination="bDs-QF-Nj4" kind="relationship" relationship="viewControllers" id="OLO-uk-H7f"/>
                         <segue destination="ZEE-8k-trw" kind="relationship" relationship="viewControllers" id="Nvf-Ko-STd"/>
                     </connections>
                 </tabBarController>
@@ -223,7 +219,7 @@
         <!--Auto Complete Delegate-->
         <scene sceneID="l2W-OY-EVd">
             <objects>
-                <viewController id="U9b-aq-FVv" customClass="GPCMLPAutoCompleteDemoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="U9b-aq-FVv" customClass="GPCMLPAutoCompleteDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wgp-eh-1Ze"/>
                         <viewControllerLayoutGuide type="bottom" id="tYe-xe-LWr"/>
@@ -344,6 +340,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9g-4s-rfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033" y="-66"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="PFd-Nd-HJl">
+            <objects>
+                <tableViewController id="FT4-6c-HF2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJW-Ut-CcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eh3-iE-6VC">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eh3-iE-6VC" id="Zfv-6v-Hpg">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FT4-6c-HF2" id="63d-K2-vA9"/>
+                            <outlet property="delegate" destination="FT4-6c-HF2" id="Ih4-5h-25H"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="epv-AB-uxT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ee-rM-LFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="621.13943028485767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mX8-tZ-oRO">
@@ -476,6 +501,27 @@
             </objects>
             <point key="canvasLocation" x="1775" y="2239"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u25-Kw-sP6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bDs-QF-Nj4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="New Post" id="Zjk-bG-dSC">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O1d-PL-EVe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FT4-6c-HF2" kind="relationship" relationship="rootViewController" id="ObX-no-3MP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfK-iV-nYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="621.13943028485767"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Conference" width="37" height="37"/>
@@ -483,6 +529,7 @@
         <image name="Exit" width="37" height="37"/>
         <image name="New Post" width="37" height="37"/>
         <image name="Price Tag" width="37" height="37"/>
+        <image name="user-outline.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mvv-Vr-KWY"/>
