@@ -136,7 +136,7 @@ class PeopleTableViewController: UITableViewController {
 
     //if first time
     func checkMyUserTree(myUID: String, otherUID:String){
-    ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+    ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).observeSingleEvent(of:FIRDataEventType.value, with: { (snapshot) in
             //if your userID is not under my user object
             if (!snapshot.exists()) {
                 self.ref.child("Users").child(myUID).child("potentialMatchees").updateChildValues([otherUID:true])
@@ -151,10 +151,10 @@ class PeopleTableViewController: UITableViewController {
     }
     
     func updateBothMainMatcheesTree(myUID: String, otherUID:String) {
-        ref.child("Users").child(myUID).child("matchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("Users").child(myUID).child("matchees").child(otherUID).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             //Add UID's to respective user objects
             self.ref.child("Users").child(myUID).child("matchees").updateChildValues([otherUID:true])
-            self.ref.child("Users").child(otherUID).child("matchees").updateChildValues([myUID:false])
+            self.ref.child("Users").child(otherUID).child("matchees").updateChildValues([myUID:true])
             
             //Remove UID's from potential matchees
         self.ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).removeValue()
