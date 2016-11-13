@@ -129,9 +129,7 @@ class PeopleTableViewController: UITableViewController {
         let myUserID = FIRAuth.auth()?.currentUser?.uid
         let personInterestKey = personObject.key
         self.checkMyUserTree(myUID: myUserID!, otherUID: personInterestKey)
-        
-        
-       
+        sender.isEnabled = false
     }
 
     //if first time
