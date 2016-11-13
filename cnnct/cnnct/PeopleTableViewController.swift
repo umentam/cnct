@@ -128,11 +128,45 @@ class PeopleTableViewController: UITableViewController {
         let personObject:FIRDataSnapshot = self.attendees[sender.tag]
         let myUserID = FIRAuth.auth()?.currentUser?.uid
         let personInterestKey = personObject.key
+        self.checkMyUserTree(myUID: myUserID!, otherUID: personInterestKey)
         
-        ref.child("Users").child(myUserID!).child("potentialMatchees").updateChildValues([personInterestKey:true])
-        ref.child("Users").child(personInterestKey).child("potentialMatchees").updateChildValues([myUserID!:false])
+        
+       
     }
 
+    //if first time
+    func checkMyUserTree(myUID: String, otherUID:String){
+    ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //if your userID is not under my user object
+            if (!snapshot.exists()) {
+                self.ref.child("Users").child(myUID).child("potentialMatchees").updateChildValues([otherUID:true])
+                self.ref.child("Users").child(otherUID).child("potentialMatchees").updateChildValues([myUID:false])
+                //It is in the "else"case
+            } else {
+                self.updateBothMainMatcheesTree(myUID: myUID, otherUID: otherUID)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func updateBothMainMatcheesTree(myUID: String, otherUID:String) {
+        ref.child("Users").child(myUID).child("matchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //Add UID's to respective user objects
+            self.ref.child("Users").child(myUID).child("matchees").updateChildValues([otherUID:true])
+            self.ref.child("Users").child(otherUID).child("matchees").updateChildValues([myUID:false])
+            
+            //Remove UID's from potential matchees
+        self.ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).removeValue()
+        self.ref.child("Users").child(otherUID).child("potentialMatchees").child(myUID).removeValue()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
