@@ -71,6 +71,9 @@ class MessagesTableViewController: UITableViewController {
 ////        self.navigationController?.pushViewController(controller, animated: true)
 //    }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("I was touched!")
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
