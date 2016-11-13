@@ -12,6 +12,7 @@ class MessagesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fullName: UILabel!
     
+    @IBOutlet weak var profImage: UIImageView!
     @IBOutlet weak var roleLabel: UILabel!
     //@IBOutlet weak var lastMessage: UILabel!
     

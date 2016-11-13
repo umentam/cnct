@@ -61,6 +61,15 @@ class MessagesTableViewController: UITableViewController {
         }
         return numOfSections
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        print("I was touched!")
+////        var snap:FIRDataSnapshot
+////        snap = orgs[indexPath.row]
+////        let controller = OrgProfileViewController()
+////        controller.orgId = snap.key
+////        self.navigationController?.pushViewController(controller, animated: true)
+//    }
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,19 +78,14 @@ class MessagesTableViewController: UITableViewController {
     }
     
     func retrieveEventAttendees(completion : (Bool) ->()) {
-        print("trying to get inside")
         let userID = FIRAuth.auth()?.currentUser?.uid
         ref.child("Users").child(userID!).child("matchees").observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value)
             for object in snapshot.children.allObjects as? [FIRDataSnapshot] ?? []{
                 self.interimUserIds.append(object.key)
             }
             for object in self.interimUserIds {
-                print ("trying to print the key")
-                print (object)
                 let attendeesQuery = self.ref.child("Users").child(object)
                 attendeesQuery.observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot)in
-                    print("i got inside of the attendees query")
                     self.attendees.append(snapshot)
                     self.tableView.reloadData()
                 })
