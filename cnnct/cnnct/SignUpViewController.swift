@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
         
         if (FBSDKAccessToken.current() != nil) {
             // User is logged in, do work such as go to next view controller.
-            print("the user is already logged in.")
+            print("user is already logged in")
             
         }
         else {
@@ -61,11 +61,8 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
             print("Logged in successfully!")
             
             let defaults = UserDefaults.standard
-            if(defaults.bool(forKey: "hasSignedUp") == nil){
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InterestsViewController") as UIViewController
-                let navController = UINavigationController(rootViewController: viewController)
-                self.present(navController, animated: true, completion: nil)
-
+            if(defaults.bool(forKey: "hasSignedUp")){
+                self.gotoInterestsView()
             }
             else {
                 let accessToken = FBSDKAccessToken.current()
@@ -93,6 +90,13 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
                 }
             }
         }
+    }
+    
+    func gotoInterestsView(){
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InterestsViewController") as UIViewController
+        let navController = UINavigationController(rootViewController: viewController)
+        self.present(navController, animated: true, completion: nil)
+
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
