@@ -19,6 +19,7 @@ class InterestsViewController: UIViewController {
     var mainSet:Set<String> = Set([])
     var prefTags = [String]()
     var ref:FIRDatabaseReference!
+    var role:String!
     
     
     override func viewDidLoad() {
@@ -110,6 +111,7 @@ class InterestsViewController: UIViewController {
     
    
     @IBAction func updateClicked(_ sender: Any) {
+        print("got the role" + role)
         if !(mainSet.isEmpty) {
             let preferences = mainSet
             
