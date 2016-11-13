@@ -68,7 +68,6 @@ class PeopleTableViewController: UITableViewController {
     func retrieveEventAttendees(completion : (Bool) ->()) {
         let userID = FIRAuth.auth()?.currentUser?.uid
         ref.child("Users").child(userID!).child("eventAttending").observeSingleEvent(of: .value, with: { (snapshot) in
-            
                     self.ref.child("Events").child(snapshot.value as! String).child("attendees").observeSingleEvent(of: .value, with: { (snapshot) in
                         let enumerator = snapshot.children
                         while let rest = enumerator.nextObject() as? FIRDataSnapshot {
@@ -113,15 +112,61 @@ class PeopleTableViewController: UITableViewController {
             
             interestArray +=  rest.key + ", "
         }
+        //interestArray.remove(at: interestArray.endIndex.predecessor())
         cell.Interests?.text = String(interestArray.characters.dropLast())
         
+        //Button setup code
         cell.chatButton.tag = indexPath.row
-        
+        cell.chatButton.addTarget(self, action: #selector(self.chatAction(sender:)), for: .touchUpInside)
         
         return cell
     }
     
+    @IBAction func chatAction(sender: UIButton) {
+        
+        //Update potential matchees
+        let personObject:FIRDataSnapshot = self.attendees[sender.tag]
+        let myUserID = FIRAuth.auth()?.currentUser?.uid
+        let personInterestKey = personObject.key
+        self.checkMyUserTree(myUID: myUserID!, otherUID: personInterestKey)
+        
+        
+       
+    }
 
+    //if first time
+    func checkMyUserTree(myUID: String, otherUID:String){
+    ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //if your userID is not under my user object
+            if (!snapshot.exists()) {
+                self.ref.child("Users").child(myUID).child("potentialMatchees").updateChildValues([otherUID:true])
+                self.ref.child("Users").child(otherUID).child("potentialMatchees").updateChildValues([myUID:false])
+                //It is in the "else"case
+            } else {
+                self.updateBothMainMatcheesTree(myUID: myUID, otherUID: otherUID)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func updateBothMainMatcheesTree(myUID: String, otherUID:String) {
+        ref.child("Users").child(myUID).child("matchees").child(otherUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //Add UID's to respective user objects
+            self.ref.child("Users").child(myUID).child("matchees").updateChildValues([otherUID:true])
+            self.ref.child("Users").child(otherUID).child("matchees").updateChildValues([myUID:false])
+            
+            //Remove UID's from potential matchees
+        self.ref.child("Users").child(myUID).child("potentialMatchees").child(otherUID).removeValue()
+        self.ref.child("Users").child(otherUID).child("potentialMatchees").child(myUID).removeValue()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
