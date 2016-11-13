@@ -61,7 +61,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
             print("Logged in successfully!")
             
             let defaults = UserDefaults.standard
-            if(defaults.bool(forKey: "hasSignedUp")){
+            if(defaults.bool(forKey: "hasSignedUp") == nil){
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InterestsViewController") as UIViewController
                 let navController = UINavigationController(rootViewController: viewController)
                 self.present(navController, animated: true, completion: nil)
@@ -78,7 +78,11 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
                         return
                     }else{
                         var data = result as! [String:Any]
-                        self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!])
+                        var fbID = data["id"]!
+                        let facebookProfileUrl = "https://graph.facebook.com/\(fbID)/picture?type=large"
+                        print(data)
+                        print("printing the fb data")
+                        self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!, "facebookID": fbID, "facebookProfileUrl": facebookProfileUrl])
                         let defaults = UserDefaults.standard
                         defaults.set(true, forKey: "hasSignedUp")
                         

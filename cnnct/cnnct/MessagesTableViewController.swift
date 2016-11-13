@@ -18,6 +18,7 @@ class MessagesTableViewController: UITableViewController {
     var attendees : [FIRDataSnapshot] = []
     var interimUserIds = [String]()
     var displayName: String!
+    var lastMessage:String!
     var sendeeDisplayName: String!
     var userID: String!
 
@@ -51,6 +52,21 @@ class MessagesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = "Messages"
+        updateLastMessage()
+    }
+    
+    func updateLastMessage() {
+        channelRef.child("lastMessage").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value
+            print("printing the last message")
+            print(value)
+            self.lastMessage = value! as! String
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -150,10 +166,23 @@ class MessagesTableViewController: UITableViewController {
         var item : FIRDataSnapshot
         item = self.attendees[indexPath.row]
         
+        var facebookProfileUrl = (item.childSnapshot(forPath: "facebookProfileUrl").value as! String)
+        
         //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
         sendeeDisplayName = (item.childSnapshot(forPath: "name").value as! String)
         cell.fullName?.text = sendeeDisplayName
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
+        cell.lastMessage?.text = lastMessage
+        let url = URL(string: facebookProfileUrl)
+        cell.profImage.layer.cornerRadius = cell.profImage.frame.size.width / 2
+        cell.profImage.clipsToBounds = true
+        
+        if let imageData = NSData(contentsOf: url!) as? Data{
+            cell.profImage.image = UIImage(data: imageData)
+        }else{
+            print("no image data")
+        }
+
         
         
         return cell

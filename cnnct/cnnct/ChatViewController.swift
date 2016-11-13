@@ -146,6 +146,7 @@ class ChatViewController: JSQMessagesViewController {
             ]
         
         itemRef.setValue(messageItem) // 3
+        channelRef?.updateChildValues(["lastMessage": text!])
         
         JSQSystemSoundPlayer.jsq_playMessageSentSound() // 4
         
