@@ -8,16 +8,24 @@
 
 import UIKit
 import Firebase
-
 class MessagesTableViewController: UITableViewController {
     
+    private var channelRefHandle: FIRDatabaseHandle?
+    
     var ref = FIRDatabaseReference()
+    var channelRef = FIRDatabaseReference()
+    var messageRef = FIRDatabaseReference()
     var attendees : [FIRDataSnapshot] = []
     var interimUserIds = [String]()
+    var displayName: String!
+    var sendeeDisplayName: String!
+    var userID: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.ref = FIRDatabase.database().reference()
+        self.channelRef = FIRDatabase.database().reference().child("Events").child("-KWP-62cDKL7KQycu8Be").child("messageChannels").child("channel1")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,6 +39,18 @@ class MessagesTableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.topItem?.title = "Messages"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "Messages"
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,15 +93,37 @@ class MessagesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("I was touched!")
+        performSegue(withIdentifier: "gotoChatSegue", sender: self)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoChatSegue" {
+            if let destination = segue.destination as? ChatViewController {
+                destination.sendeeDisplayName = sendeeDisplayName
+                destination.displayName = displayName
+                print("This is the displayname")
+                print(displayName)
+                destination.userID = userID
+                destination.channelRef = channelRef
+            }
+        }
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return attendees.count
     }
     
     func retrieveEventAttendees(completion : (Bool) ->()) {
-        let userID = FIRAuth.auth()?.currentUser?.uid
+        userID = FIRAuth.auth()?.currentUser?.uid
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            self.displayName = value?["name"] as? String ?? ""
+        }) { (error) in
+            print(error.localizedDescription)
+        }
         ref.child("Users").child(userID!).child("matchees").observeSingleEvent(of: .value, with: { (snapshot) in
             for object in snapshot.children.allObjects as? [FIRDataSnapshot] ?? []{
                 self.interimUserIds.append(object.key)
@@ -109,11 +151,18 @@ class MessagesTableViewController: UITableViewController {
         item = self.attendees[indexPath.row]
         
         //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
-        cell.fullName?.text = (item.childSnapshot(forPath: "name").value as! String)
+        sendeeDisplayName = (item.childSnapshot(forPath: "name").value as! String)
+        cell.fullName?.text = sendeeDisplayName
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
         
         
         return cell
+    }
+    
+    deinit {
+        if let refHandle = channelRefHandle {
+            channelRef.removeObserver(withHandle: refHandle)
+        }
     }
 
     /*

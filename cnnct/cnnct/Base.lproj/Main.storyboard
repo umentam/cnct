@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhJ-AS-mAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4529" y="716"/>
+            <point key="canvasLocation" x="4942" y="711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -336,7 +336,7 @@
         <!--Messages Table View Controller-->
         <scene sceneID="PFd-Nd-HJl">
             <objects>
-                <tableViewController id="FT4-6c-HF2" customClass="MessagesTableViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MessagesTableViewController" id="FT4-6c-HF2" customClass="MessagesTableViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="IJW-Ut-CcS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,10 +399,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="epv-AB-uxT"/>
+                    <connections>
+                        <segue destination="mvT-yp-qN1" kind="show" identifier="gotoChatSegue" id="zet-iZ-d5B"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ee-rM-LFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3351.1999999999998" y="621.13943028485767"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="ACC-Nb-5iK">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="mvT-yp-qN1" customClass="ChatViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mcj-Dd-9aK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ayb-v8-bkW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhm-j5-cYR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYm-dV-4pR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4081" y="621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mX8-tZ-oRO">
