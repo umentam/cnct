@@ -106,8 +106,18 @@ class PeopleTableViewController: UITableViewController {
         cell.fullName?.text = (item.childSnapshot(forPath: "name").value as! String)
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
         
+        var interestArray:String = ""
+        let enumerator = item.childSnapshot(forPath: "preferences").children
         
-
+        while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+            
+            interestArray +=  rest.key + ", "
+        }
+        cell.Interests?.text = String(interestArray.characters.dropLast())
+        
+        cell.chatButton.tag = indexPath.row
+        
+        
         return cell
     }
     
