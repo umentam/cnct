@@ -18,6 +18,8 @@
 		C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD61DD7AAEA008D0402 /* TagListView.swift */; };
 		C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */; };
 		C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */; };
+		C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */; };
+		C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */; };
 		DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */; };
 		DD9B7F371DD7AD970011A589 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */; };
 		DD9B7F3B1DD7ADA20011A589 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */; };
@@ -67,6 +69,8 @@
 		C7D41DD61DD7AAEA008D0402 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DD9B7F361DD7AD970011A589 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		DD9B7F381DD7ADA20011A589 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				DD9B7F2C1DD79D640011A589 /* SignUpViewController.swift */,
 				C7D41DD81DD7C61B008D0402 /* MessagesViewController.swift */,
 				C7D41DDA1DD7C635008D0402 /* ProfileViewController.swift */,
+				C7D41DDC1DD80829008D0402 /* PeopleTableViewController.swift */,
+				C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */,
 				C7D41DD91DD7C61B008D0402 /* MessagesViewController.swift in Sources */,
 				C7D41DD71DD7AAEA008D0402 /* TagListView.swift in Sources */,
 				C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */,
@@ -397,6 +404,7 @@
 				C7D41DDB1DD7C635008D0402 /* ProfileViewController.swift in Sources */,
 				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
 				DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */,
+				C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */,
 				C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
