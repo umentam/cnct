@@ -7,20 +7,28 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class PeopleTableViewController: UITableViewController {
+    
+    
+    // MARK: - Properties
+    var ref = FIRDatabaseReference()
+    var attendees : [FIRDataSnapshot] = []
+    var interimUserIds = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         self.ref = FIRDatabase.database().reference()
+        
+        retrieveEventAttendees(completion: { (downLoadState) in
+            downLoadState
+        })
         
         self.navigationController?.navigationBar.topItem?.title = "Pick People To Connect With"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,24 +39,77 @@ class PeopleTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        //#warning Incomplete implementation, return the number of sections
+        //return 1
+        var numOfSections: Int = 0
+        if attendees.count > 0
+        {
+            tableView.separatorStyle = .singleLine
+            numOfSections                = 1
+            tableView.backgroundView = nil
+        }
+        else
+        {
+            let noDataLabel: UILabel     = UILabel(frame: CGRect(0, 0, tableView.bounds.size.width, tableView.bounds.size.height))
+            noDataLabel.text             = "You are not currently checked in at an event."
+            noDataLabel.textColor        = UIColor.black
+            noDataLabel.textAlignment    = .center
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        return numOfSections
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return attendees.count
+    }
+    
+    func retrieveEventAttendees(completion : (Bool) ->()) {
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        ref.child("Users").child(userID!).child("eventAttending").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+                    self.ref.child("Events").child(snapshot.value as! String).child("attendees").observeSingleEvent(of: .value, with: { (snapshot) in
+                        let enumerator = snapshot.children
+                        while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                            if(rest.key != userID) {
+                            self.interimUserIds.append(rest.key)
+                            }
+                        }
+                        for object in self.interimUserIds {
+                            let attendeesQuery = self.ref.child("Users").child(object)
+                            attendeesQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot)in
+                                    self.attendees.append(snapshot)
+                                    self.tableView.reloadData()
+                            })
+                        }
+                    }) { (error) in
+                        print(error.localizedDescription)
+                    }
+            
+
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+       completion(true) 
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleTableViewCell", for: indexPath) as! PeopleTableViewCell
+        
+        //Fetches appropriate info for each followed org
+        var item : FIRDataSnapshot
+        item = self.attendees[indexPath.row]
+        
+        //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
+        cell.fullName?.text = (item.childSnapshot(forPath: "name").value as! String)
+        cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
