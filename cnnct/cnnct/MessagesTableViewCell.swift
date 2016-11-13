@@ -11,8 +11,9 @@ import UIKit
 class MessagesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fullName: UILabel!
-    @IBOutlet weak var role: UILabel!
-    @IBOutlet weak var lastMessage: UILabel!
+    
+    @IBOutlet weak var roleLabel: UILabel!
+    //@IBOutlet weak var lastMessage: UILabel!
     
     
     override func awakeFromNib() {
