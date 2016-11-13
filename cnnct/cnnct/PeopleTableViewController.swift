@@ -112,19 +112,25 @@ class PeopleTableViewController: UITableViewController {
             
             interestArray +=  rest.key + ", "
         }
+        //interestArray.remove(at: interestArray.endIndex.predecessor())
         cell.Interests?.text = String(interestArray.characters.dropLast())
         
         //Button setup code
         cell.chatButton.tag = indexPath.row
-        cell.chatButton.addTarget(self, action: "chatAction: ", for: .touchUpInside)
+        cell.chatButton.addTarget(self, action: #selector(self.chatAction(sender:)), for: .touchUpInside)
         
         return cell
     }
     
     @IBAction func chatAction(sender: UIButton) {
         
+        //Update potential matchees
+        let personObject:FIRDataSnapshot = self.attendees[sender.tag]
+        let myUserID = FIRAuth.auth()?.currentUser?.uid
+        let personInterestKey = personObject.key
         
-        
+        ref.child("Users").child(myUserID!).child("potentialMatchees").updateChildValues([personInterestKey:true])
+        ref.child("Users").child(personInterestKey).child("potentialMatchees").updateChildValues([myUserID!:false])
     }
 
     /*
