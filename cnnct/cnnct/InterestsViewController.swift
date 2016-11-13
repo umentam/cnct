@@ -19,7 +19,6 @@ class InterestsViewController: UIViewController {
     var mainSet:Set<String> = Set([])
     var prefTags = [String]()
     var ref:FIRDatabaseReference!
-    var role:String!
     
     
     override func viewDidLoad() {
@@ -78,11 +77,6 @@ class InterestsViewController: UIViewController {
                 
             }
         })
-        
-        let userID = FIRAuth.auth()?.currentUser?.uid
-        //let thisUserID = userCurrent?.userID
-        
-        print(userID)
     }
     
     //Method to ensure you have deselected.
@@ -111,7 +105,6 @@ class InterestsViewController: UIViewController {
     
    
     @IBAction func updateClicked(_ sender: Any) {
-        print("got the role" + role)
         if !(mainSet.isEmpty) {
             let preferences = mainSet
             
