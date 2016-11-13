@@ -98,10 +98,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9R-sg-WUP">
-                                            <rect key="frame" x="8" y="16" width="82" height="81"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87x-r0-Yvs">
                                             <rect key="frame" x="98" y="8" width="259" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,19 +112,22 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-mO-KRu">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-mO-KRu">
                                             <rect key="frame" x="98" y="66" width="259" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-outline.png" translatesAutoresizingMaskIntoConstraints="NO" id="8gU-U4-qvS">
+                                            <rect key="frame" x="22" y="37" width="59" height="52"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Interests" destination="BZ0-mO-KRu" id="p0O-Hk-n6d"/>
                                     <outlet property="fullName" destination="87x-r0-Yvs" id="z7G-5x-BIo"/>
-                                    <outlet property="profImage" destination="g9R-sg-WUP" id="8dU-e1-GH4"/>
                                     <outlet property="roleLabel" destination="1mb-s0-g9g" id="KdC-Ry-DWV"/>
                                 </connections>
                             </tableViewCell>
@@ -531,6 +530,7 @@
         <image name="Exit" width="37" height="37"/>
         <image name="New Post" width="37" height="37"/>
         <image name="Price Tag" width="37" height="37"/>
+        <image name="user-outline.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mvv-Vr-KWY"/>
