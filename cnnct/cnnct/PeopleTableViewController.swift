@@ -68,7 +68,6 @@ class PeopleTableViewController: UITableViewController {
     func retrieveEventAttendees(completion : (Bool) ->()) {
         let userID = FIRAuth.auth()?.currentUser?.uid
         ref.child("Users").child(userID!).child("eventAttending").observeSingleEvent(of: .value, with: { (snapshot) in
-            
                     self.ref.child("Events").child(snapshot.value as! String).child("attendees").observeSingleEvent(of: .value, with: { (snapshot) in
                         let enumerator = snapshot.children
                         while let rest = enumerator.nextObject() as? FIRDataSnapshot {
@@ -115,12 +114,18 @@ class PeopleTableViewController: UITableViewController {
         }
         cell.Interests?.text = String(interestArray.characters.dropLast())
         
+        //Button setup code
         cell.chatButton.tag = indexPath.row
-        
+        cell.chatButton.addTarget(self, action: "chatAction: ", for: .touchUpInside)
         
         return cell
     }
     
+    @IBAction func chatAction(sender: UIButton) {
+        
+        
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
