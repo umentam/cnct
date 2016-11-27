@@ -14,6 +14,7 @@ import FBSDKCoreKit
 class SkillsViewController: UIViewController {
     
     @IBOutlet weak var roleField: UITextField!
+    @IBOutlet weak var backgroundField: UITextView!
     
     var ref:FIRDatabaseReference!
     
@@ -22,7 +23,7 @@ class SkillsViewController: UIViewController {
         super.viewDidLoad()
         
         ref = FIRDatabase.database().reference()
-        self.navigationController?.navigationBar.topItem?.title = "Your Role"
+        self.navigationController?.navigationBar.topItem?.title = "Your Experience"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
        
     }
@@ -35,9 +36,12 @@ class SkillsViewController: UIViewController {
     @IBAction func gotoSearch(_ sender: AnyObject) {
         print("he wants to perform a segue")
         let role = roleField.text
+        let background = backgroundField.text
+        
         
         let userID = FIRAuth.auth()?.currentUser?.uid
         self.ref.child("Users").child(userID!).child("role").setValue(role)
+        self.ref.child("Users").child(userID!).child("background").setValue(background)
         
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as UIViewController
         let navController = UINavigationController(rootViewController: viewController)
