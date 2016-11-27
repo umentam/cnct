@@ -14,6 +14,7 @@ import FBSDKCoreKit
 class SkillsViewController: UIViewController {
     
     @IBOutlet weak var roleField: UITextField!
+    @IBOutlet weak var backgroundField: UITextView!
     
     var ref:FIRDatabaseReference!
     
@@ -35,9 +36,12 @@ class SkillsViewController: UIViewController {
     @IBAction func gotoSearch(_ sender: AnyObject) {
         print("he wants to perform a segue")
         let role = roleField.text
+        let background = backgroundField.text
+        
         
         let userID = FIRAuth.auth()?.currentUser?.uid
         self.ref.child("Users").child(userID!).child("role").setValue(role)
+        self.ref.child("Users").child(userID!).child("background").setValue(background)
         
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as UIViewController
         let navController = UINavigationController(rootViewController: viewController)
