@@ -26,6 +26,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         ref = FIRDatabase.database().reference()
+        ref.child("Events").childByAutoId().setValue(["eventName": "Apple Keynote 2017"])
         var loginButton = FBSDKLoginButton()
         loginButton.delegate = self
         loginButton.center = self.view.center
@@ -62,7 +63,10 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
             
             let defaults = UserDefaults.standard
             if(defaults.bool(forKey: "hasSignedUp")){
-                self.gotoInterestsView()
+//                self.gotoInterestsView()
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SkillsViewController") as UIViewController
+                let navController = UINavigationController(rootViewController: viewController)
+                self.present(navController, animated: true, completion: nil)
             }
             else {
                 let accessToken = FBSDKAccessToken.current()
