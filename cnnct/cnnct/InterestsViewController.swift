@@ -26,6 +26,8 @@ class InterestsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
+        self.extendedLayoutIncludesOpaqueBars = true;
+        self.edgesForExtendedLayout = [];
         
         
         // Do any additional setup after loading the view, typically from a nib.

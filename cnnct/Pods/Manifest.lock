@@ -1,4 +1,5 @@
 PODS:
+  - ColorMatchTabs (2.0)
   - Firebase (3.9.0):
     - Firebase/Core (= 3.9.0)
   - Firebase/Auth (3.9.0):
@@ -73,6 +74,7 @@ PODS:
   - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
+  - ColorMatchTabs (from `../`)
   - Firebase
   - Firebase/Auth
   - Firebase/Crash
@@ -82,7 +84,12 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - SwiftGifOrigin
 
+EXTERNAL SOURCES:
+  ColorMatchTabs:
+    :path: "../"
+
 SPEC CHECKSUMS:
+  ColorMatchTabs: d66f857e49d00d9fe956b930d0ac78f4b1172f54
   Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
@@ -100,6 +107,6 @@ SPEC CHECKSUMS:
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: bf4a0a8e5cbd661b5e8359a585867072543eaeb5
+PODFILE CHECKSUM: 65985b5fdd792ed63beef21e0c38a3861bf3007e
 
 COCOAPODS: 1.1.1

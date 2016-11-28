@@ -78,16 +78,16 @@ class HomefeedViewController: UIViewController {
 
             // Initialize scroll menu
             
-//            pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(0.0,0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
-            
+//            pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0,y: 0.0, width:self.view.frame.width, height:self.view.frame.height), pageMenuOptions: parameters)
+//            
 //
 //            self.addChildViewController(pageMenu!)
 //            
 //            self.view.addSubview(pageMenu!.view)
 //            
 //            pageMenu!.didMove(toParentViewController: self)
-//            
-//            
+            
+            
         }
         noOfTimesControllerCameIntoView += 1
         

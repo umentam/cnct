@@ -861,7 +861,9 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         
         newVC.willMove(toParentViewController: self)
         
-        newVC.view.frame = CGRect(self.view.frame.width * CGFloat(index), menuHeight, self.view.frame.width, self.view.frame.height - menuHeight)
+        print("index: \(index)")
+        
+        newVC.view.frame = CGRect(x: self.view.frame.width * CGFloat(index), y: menuHeight,width: self.view.frame.width, height: self.view.frame.height - menuHeight)
         
         self.addChildViewController(newVC)
         self.controllerScrollView.addSubview(newVC.view)

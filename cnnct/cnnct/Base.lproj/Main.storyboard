@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pick Your Event Interests-->
+        <!--Interests View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="InterestsViewController" id="9pv-A4-QxB" customClass="InterestsViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                             <constraint firstItem="Sg1-b7-Odm" firstAttribute="top" secondItem="VYH-yV-ct1" secondAttribute="bottom" constant="25" id="vi7-Xe-age"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pick Your Event Interests" id="gyh-PL-26v"/>
+                    <navigationItem key="navigationItem" id="gyh-PL-26v"/>
                     <connections>
                         <outlet property="tagListView" destination="VYH-yV-ct1" id="Hdj-s2-NDj"/>
                         <outlet property="updateButton" destination="Sg1-b7-Odm" id="Cjg-xq-M8l"/>
@@ -354,7 +354,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AZq-6Q-Oif">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AZq-6Q-Oif">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -469,7 +469,7 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7GI-DY-uLo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7GI-DY-uLo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -581,7 +581,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RwW-BF-wms" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xJR-aY-U5k">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xJR-aY-U5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -603,7 +603,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljA-NK-z0Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ljA-NK-z0Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -616,10 +616,10 @@
             </objects>
             <point key="canvasLocation" x="977" y="1522"/>
         </scene>
-        <!--Homefeed View Controller-->
+        <!--CNCT-->
         <scene sceneID="ljY-KA-rpQ">
             <objects>
-                <viewController id="Tza-aA-3CE" customClass="HomefeedViewController" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CNCT" id="Tza-aA-3CE" customClass="ExampleViewContoller" customModule="cnnct" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="51D-uG-FnX"/>
                         <viewControllerLayoutGuide type="bottom" id="vsW-O3-M4a"/>
@@ -629,9 +629,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X9E-yo-jxr">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3jg-3s-9G8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="X9E-yo-jxr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBn-bY-snE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -645,7 +643,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O1d-PL-EVe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O1d-PL-EVe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -663,7 +661,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="940-so-93P" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0jg-YO-f1g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0jg-YO-f1g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -684,7 +682,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IHc-Xh-XNa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="IHc-Xh-XNa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -709,7 +707,7 @@
         <image name="user-outline.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mvv-Vr-KWY"/>
+        <segue reference="ZbL-n6-xNZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

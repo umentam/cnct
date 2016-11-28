@@ -12,4 +12,5 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Crash'
 pod 'JSQMessagesViewController'
 pod 'SwiftGifOrigin'
+pod 'ColorMatchTabs', :path => "../"
 end

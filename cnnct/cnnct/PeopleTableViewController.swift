@@ -28,6 +28,7 @@ class PeopleTableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.topItem?.title = "Connect with Attendees"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
+        self.tableView.register(UINib(nibName: "PeoplePageTableViewCell", bundle: nil), forCellReuseIdentifier: "PeopleTableViewCell")
         
     }
 
@@ -163,7 +164,13 @@ class PeopleTableViewController: UITableViewController {
         }
     }
     
-    
+//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+//    {
+//        return 140.0;//Choose your custom row height
+//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 140.0
+    }
     
     /*
     // Override to support conditional editing of the table view.

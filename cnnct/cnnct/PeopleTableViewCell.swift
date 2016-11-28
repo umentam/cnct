@@ -9,12 +9,11 @@
 import UIKit
 
 class PeopleTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var Interests: UILabel!
     @IBOutlet weak var chatButton: UIButton!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

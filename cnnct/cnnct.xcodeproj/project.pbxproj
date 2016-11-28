@@ -13,10 +13,24 @@
 		8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFB1DD7E02D00C6083C /* SearchDataSource.m */; };
 		8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */; };
 		8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */; };
+		C750FED91DECE920009BD840 /* PeoplePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */; };
 		C76B85E81DD81FF300981D08 /* user-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B85E71DD81FF300981D08 /* user-outline.png */; };
 		C78E95C71DEBA16B0038D3AA /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */; };
 		C78E95C91DEBA40B0038D3AA /* CnctConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */; };
 		C78E95CB1DEBA8280038D3AA /* HomefeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */; };
+		C7908A911DECB392007F9BE4 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A901DECB392007F9BE4 /* TabItem.swift */; };
+		C7908A941DECB3E7007F9BE4 /* ControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A931DECB3E7007F9BE4 /* ControllersProvider.swift */; };
+		C7908A961DECB405007F9BE4 /* TabSwitcherItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A951DECB405007F9BE4 /* TabSwitcherItemsProvider.swift */; };
+		C7908A9A1DECC52E007F9BE4 /* StubContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A991DECC52E007F9BE4 /* StubContentTableViewController.swift */; };
+		C7908A9C1DECC5B2007F9BE4 /* ExampleViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A9B1DECC5B2007F9BE4 /* ExampleViewContoller.swift */; };
+		C7908A9E1DECC62C007F9BE4 /* ExamplePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A9D1DECC62C007F9BE4 /* ExamplePopoverViewController.swift */; };
+		C7908AA11DECC7BC007F9BE4 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908A9F1DECC7BC007F9BE4 /* ExampleTableViewCell.swift */; };
+		C7908AA21DECC7BC007F9BE4 /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7908AA01DECC7BC007F9BE4 /* ExampleTableViewCell.xib */; };
+		C7908AA81DECCAF4007F9BE4 /* GothamProBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7908AA41DECCAF4007F9BE4 /* GothamProBlack.ttf */; };
+		C7908AA91DECCAF4007F9BE4 /* GothamProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7908AA51DECCAF4007F9BE4 /* GothamProBold.ttf */; };
+		C7908AAA1DECCAF4007F9BE4 /* GothamProMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7908AA61DECCAF4007F9BE4 /* GothamProMedium.ttf */; };
+		C7908AAB1DECCAF4007F9BE4 /* GothamProRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7908AA71DECCAF4007F9BE4 /* GothamProRegular.ttf */; };
+		C7908AAD1DECCB14007F9BE4 /* UIFont+Zeplin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7908AAC1DECCB14007F9BE4 /* UIFont+Zeplin.swift */; };
 		C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA61DD6E221008D0402 /* AppDelegate.swift */; };
 		C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DA81DD6E221008D0402 /* InterestsViewController.swift */; };
 		C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D41DAA1DD6E221008D0402 /* PeopleViewController.swift */; };
@@ -79,10 +93,24 @@
 		8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoAppDelegate.m; sourceTree = "<group>"; };
 		8E092BFE1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCMLPAutoCompleteDemoViewController.h; sourceTree = "<group>"; };
 		8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoViewController.m; sourceTree = "<group>"; };
+		C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeoplePageTableViewCell.xib; sourceTree = "<group>"; };
 		C76B85E71DD81FF300981D08 /* user-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-outline.png"; sourceTree = "<group>"; };
 		C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CnctConstants.swift; sourceTree = "<group>"; };
 		C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomefeedViewController.swift; sourceTree = "<group>"; };
+		C7908A901DECB392007F9BE4 /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		C7908A931DECB3E7007F9BE4 /* ControllersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersProvider.swift; sourceTree = "<group>"; };
+		C7908A951DECB405007F9BE4 /* TabSwitcherItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabSwitcherItemsProvider.swift; sourceTree = "<group>"; };
+		C7908A991DECC52E007F9BE4 /* StubContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubContentTableViewController.swift; sourceTree = "<group>"; };
+		C7908A9B1DECC5B2007F9BE4 /* ExampleViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewContoller.swift; sourceTree = "<group>"; };
+		C7908A9D1DECC62C007F9BE4 /* ExamplePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplePopoverViewController.swift; sourceTree = "<group>"; };
+		C7908A9F1DECC7BC007F9BE4 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		C7908AA01DECC7BC007F9BE4 /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
+		C7908AA41DECCAF4007F9BE4 /* GothamProBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBlack.ttf; sourceTree = "<group>"; };
+		C7908AA51DECCAF4007F9BE4 /* GothamProBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBold.ttf; sourceTree = "<group>"; };
+		C7908AA61DECCAF4007F9BE4 /* GothamProMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProMedium.ttf; sourceTree = "<group>"; };
+		C7908AA71DECCAF4007F9BE4 /* GothamProRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProRegular.ttf; sourceTree = "<group>"; };
+		C7908AAC1DECCB14007F9BE4 /* UIFont+Zeplin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Zeplin.swift"; sourceTree = "<group>"; };
 		C7C9383B31F2BEE02A21F5C9 /* Pods-cnnct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnnct.release.xcconfig"; path = "Pods/Target Support Files/Pods-cnnct/Pods-cnnct.release.xcconfig"; sourceTree = "<group>"; };
 		C7D41DA31DD6E221008D0402 /* cnnct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnnct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D41DA61DD6E221008D0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,12 +191,72 @@
 			name = AutoComplete;
 			sourceTree = "<group>";
 		};
+		C750FED51DECE7AE009BD840 /* TabBarDocs */ = {
+			isa = PBXGroup;
+			children = (
+				C7908AA31DECCAEA007F9BE4 /* Font */,
+				C7908A981DECB895007F9BE4 /* TabViews */,
+				C7908A971DECB887007F9BE4 /* TabViewControllers */,
+				C7908A921DECB3B0007F9BE4 /* DataProviders */,
+				C7908A8F1DECB375007F9BE4 /* Models */,
+				C78E95C51DEBA15A0038D3AA /* CAPSPageMenu */,
+			);
+			name = TabBarDocs;
+			sourceTree = "<group>";
+		};
 		C78E95C51DEBA15A0038D3AA /* CAPSPageMenu */ = {
 			isa = PBXGroup;
 			children = (
 				C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */,
 			);
 			name = CAPSPageMenu;
+			sourceTree = "<group>";
+		};
+		C7908A8F1DECB375007F9BE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7908A901DECB392007F9BE4 /* TabItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C7908A921DECB3B0007F9BE4 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				C7908A931DECB3E7007F9BE4 /* ControllersProvider.swift */,
+				C7908A951DECB405007F9BE4 /* TabSwitcherItemsProvider.swift */,
+			);
+			name = DataProviders;
+			sourceTree = "<group>";
+		};
+		C7908A971DECB887007F9BE4 /* TabViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7908A991DECC52E007F9BE4 /* StubContentTableViewController.swift */,
+				C7908A9B1DECC5B2007F9BE4 /* ExampleViewContoller.swift */,
+				C7908A9D1DECC62C007F9BE4 /* ExamplePopoverViewController.swift */,
+			);
+			name = TabViewControllers;
+			sourceTree = "<group>";
+		};
+		C7908A981DECB895007F9BE4 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				C7908A9F1DECC7BC007F9BE4 /* ExampleTableViewCell.swift */,
+				C7908AA01DECC7BC007F9BE4 /* ExampleTableViewCell.xib */,
+			);
+			name = TabViews;
+			sourceTree = "<group>";
+		};
+		C7908AA31DECCAEA007F9BE4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C7908AA41DECCAF4007F9BE4 /* GothamProBlack.ttf */,
+				C7908AA51DECCAF4007F9BE4 /* GothamProBold.ttf */,
+				C7908AA61DECCAF4007F9BE4 /* GothamProMedium.ttf */,
+				C7908AA71DECCAF4007F9BE4 /* GothamProRegular.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		C7D41D9A1DD6E221008D0402 = {
@@ -197,7 +285,7 @@
 		C7D41DA51DD6E221008D0402 /* cnnct */ = {
 			isa = PBXGroup;
 			children = (
-				C78E95C51DEBA15A0038D3AA /* CAPSPageMenu */,
+				C750FED51DECE7AE009BD840 /* TabBarDocs */,
 				DD02EE8A1DD8584C00EED5C2 /* Messages */,
 				8E092BF81DD7E02D00C6083C /* SearchAutoCompleteObject.h */,
 				8E092BF91DD7E02D00C6083C /* SearchAutoCompleteObject.m */,
@@ -226,6 +314,8 @@
 				C7D41DDE1DD8097A008D0402 /* PeopleTableViewCell.swift */,
 				C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */,
 				C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */,
+				C7908AAC1DECCB14007F9BE4 /* UIFont+Zeplin.swift */,
+				C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -401,10 +491,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */,
+				C750FED91DECE920009BD840 /* PeoplePageTableViewCell.xib in Resources */,
 				C76B85E81DD81FF300981D08 /* user-outline.png in Resources */,
+				C7908AA91DECCAF4007F9BE4 /* GothamProBold.ttf in Resources */,
+				C7908AAA1DECCAF4007F9BE4 /* GothamProMedium.ttf in Resources */,
+				C7908AAB1DECCAF4007F9BE4 /* GothamProRegular.ttf in Resources */,
 				DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */,
 				C7D41DB31DD6E221008D0402 /* LaunchScreen.storyboard in Resources */,
+				C7908AA81DECCAF4007F9BE4 /* GothamProBlack.ttf in Resources */,
 				C7D41DB01DD6E221008D0402 /* Assets.xcassets in Resources */,
+				C7908AA21DECC7BC007F9BE4 /* ExampleTableViewCell.xib in Resources */,
 				C7D41DAE1DD6E221008D0402 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,18 +574,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7908A9A1DECC52E007F9BE4 /* StubContentTableViewController.swift in Sources */,
 				C78E95CB1DEBA8280038D3AA /* HomefeedViewController.swift in Sources */,
+				C7908AAD1DECCB14007F9BE4 /* UIFont+Zeplin.swift in Sources */,
 				8E092C011DD7E02D00C6083C /* SearchDataSource.m in Sources */,
 				DD02EE871DD81E0400EED5C2 /* MessagesTableViewController.swift in Sources */,
+				C7908AA11DECC7BC007F9BE4 /* ExampleTableViewCell.swift in Sources */,
 				DD02EE891DD81E1F00EED5C2 /* MessagesTableViewCell.swift in Sources */,
 				C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
 				8E092C001DD7E02D00C6083C /* SearchAutoCompleteObject.m in Sources */,
+				C7908A941DECB3E7007F9BE4 /* ControllersProvider.swift in Sources */,
 				8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */,
 				C78E95C91DEBA40B0038D3AA /* CnctConstants.swift in Sources */,
 				C78E95C71DEBA16B0038D3AA /* CAPSPageMenu.swift in Sources */,
+				C7908A911DECB392007F9BE4 /* TabItem.swift in Sources */,
 				8E092BC71DD78F3400C6083C /* NSString+Levenshtein.m in Sources */,
 				8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */,
+				C7908A9C1DECC5B2007F9BE4 /* ExampleViewContoller.swift in Sources */,
 				C7D41DA91DD6E221008D0402 /* InterestsViewController.swift in Sources */,
 				8E092BC11DD78E5200C6083C /* MLPAutoCompleteTextField.m in Sources */,
 				C7D41DDF1DD8097A008D0402 /* PeopleTableViewCell.swift in Sources */,
@@ -498,7 +600,9 @@
 				DD9B7F2D1DD79D640011A589 /* SignUpViewController.swift in Sources */,
 				DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */,
 				DD02EE8C1DD8588300EED5C2 /* ChatViewController.swift in Sources */,
+				C7908A961DECB405007F9BE4 /* TabSwitcherItemsProvider.swift in Sources */,
 				C7D41DDD1DD80829008D0402 /* PeopleTableViewController.swift in Sources */,
+				C7908A9E1DECC62C007F9BE4 /* ExamplePopoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
