@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
             
             let defaults = UserDefaults.standard
             if(defaults.bool(forKey: "hasSignedUp")){
-//                self.gotoInterestsView()
+               self.gotoInterestsView()
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SkillsViewController") as UIViewController
                 let navController = UINavigationController(rootViewController: viewController)
                 self.present(navController, animated: true, completion: nil)
