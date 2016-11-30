@@ -16,6 +16,7 @@
 		C750FED91DECE920009BD840 /* PeoplePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */; };
 		C750FEDB1DECF4B7009BD840 /* myInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */; };
 		C76B85E81DD81FF300981D08 /* user-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B85E71DD81FF300981D08 /* user-outline.png */; };
+		C7757CEC1DEE892500F51920 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7757CEA1DEE892500F51920 /* MessageTableViewCell.xib */; };
 		C78E95C71DEBA16B0038D3AA /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */; };
 		C78E95C91DEBA40B0038D3AA /* CnctConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */; };
 		C78E95CB1DEBA8280038D3AA /* HomefeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */; };
@@ -54,7 +55,6 @@
 		DD9B7F3D1DD7ADA20011A589 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */; };
 		DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */; };
 		DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */; };
-		DDC127C81DEE6DE6007EDD60 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC127C71DEE6DE6007EDD60 /* CreateEventViewController.swift */; };
 		DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DDEB62301DD6E8A400B3DA4A /* Podfile */; };
 		FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +98,7 @@
 		C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeoplePageTableViewCell.xib; sourceTree = "<group>"; };
 		C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myInterestsViewController.swift; sourceTree = "<group>"; };
 		C76B85E71DD81FF300981D08 /* user-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-outline.png"; sourceTree = "<group>"; };
+		C7757CEA1DEE892500F51920 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CnctConstants.swift; sourceTree = "<group>"; };
 		C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomefeedViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +145,6 @@
 		DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cnnct.entitlements; sourceTree = "<group>"; };
 		DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DDC127C71DEE6DE6007EDD60 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,6 +321,7 @@
 				C7908AAC1DECCB14007F9BE4 /* UIFont+Zeplin.swift */,
 				C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */,
 				C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */,
+				C7757CEA1DEE892500F51920 /* MessageTableViewCell.xib */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -507,6 +508,7 @@
 				C7D41DB01DD6E221008D0402 /* Assets.xcassets in Resources */,
 				C7908AA21DECC7BC007F9BE4 /* ExampleTableViewCell.xib in Resources */,
 				C7D41DAE1DD6E221008D0402 /* Main.storyboard in Resources */,
+				C7757CEC1DEE892500F51920 /* MessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

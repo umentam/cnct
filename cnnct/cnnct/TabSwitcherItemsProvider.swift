@@ -24,6 +24,18 @@ class TabItemsProvider {
                 tintColor: UIColor(red: 0.15, green: 0.67, blue: 0.99, alpha: 1.00),
                 normalImage: UIImage(named: "Conference")!,
                 highlightedImage: UIImage(named: "Conference-unfilled")!
+            ),
+            TabItem(
+                title: "Matches",
+                tintColor: UIColor(red: 0.96, green: 0.61, blue: 0.58, alpha: 1.00),
+                normalImage: UIImage(named: "message")!,
+                highlightedImage: UIImage(named: "message-unfilled")!
+            ),
+            TabItem(
+                title: "Profile",
+                tintColor: UIColor(red: 1.00, green: 0.61, blue: 0.16, alpha: 1.00),
+                normalImage: UIImage(named: "user")!,
+                highlightedImage: UIImage(named: "user-unfilled")!
             )
         ]
     }()

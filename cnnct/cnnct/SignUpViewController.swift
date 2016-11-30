@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         ref = FIRDatabase.database().reference()
-        ref.child("Events").childByAutoId().setValue(["eventName": "Apple Keynote 2017"])
         var loginButton = FBSDKLoginButton()
         loginButton.delegate = self
         loginButton.center = self.view.center

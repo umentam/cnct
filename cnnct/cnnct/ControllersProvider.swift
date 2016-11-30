@@ -14,21 +14,22 @@ class StubContentViewControllersProvider {
     static let viewControllers: [UIViewController] = {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "InterestsViewController")
-        let productsViewController = controller
+        let interestsController = storyboard.instantiateViewController(withIdentifier: "InterestsViewController")
         //productsViewController.type = .products
         
         let attendeesViewController = PeopleTableViewController()
         //venuesViewController.type = .venues
         
+        let profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController")
 //        let reviewsViewController = StubContentTableViewController()
 //        reviewsViewController.type = .reviews
-//        
+
+        let messagesViewController = MessagesTableViewController()
 //        let usersViewController = StubContentTableViewController()
 //        usersViewController.type = .users
         
         //return [productsViewController, venuesViewController, reviewsViewController, usersViewController]
-        return [productsViewController, attendeesViewController]
+        return [interestsController, attendeesViewController,messagesViewController, profileViewController]
     }()
     
 }

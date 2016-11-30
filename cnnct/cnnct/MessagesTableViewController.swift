@@ -41,6 +41,8 @@ class MessagesTableViewController: UITableViewController {
         self.navigationController?.navigationBar.topItem?.title = "Messages"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
         
+        self.tableView.register(UINib(nibName: "MessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MessagesTableViewCell")
+        
         
     }
     
@@ -169,22 +171,22 @@ class MessagesTableViewController: UITableViewController {
         var item : FIRDataSnapshot
         item = self.attendees[indexPath.row]
         
-        var facebookProfileUrl = (item.childSnapshot(forPath: "facebookProfileUrl").value as! String)
+        //var facebookProfileUrl = (item.childSnapshot(forPath: "facebookProfileUrl").value as! String)
         
         //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
         sendeeDisplayName = (item.childSnapshot(forPath: "name").value as! String)
         cell.fullName?.text = sendeeDisplayName
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
         cell.lastMessage?.text = lastMessage
-        let url = URL(string: facebookProfileUrl)
-        cell.profImage.layer.cornerRadius = cell.profImage.frame.size.width / 2
-        cell.profImage.clipsToBounds = true
+        //let url = URL(string: facebookProfileUrl)
+        cell.profIMage.layer.cornerRadius = cell.profIMage.frame.size.width / 2
+        cell.profIMage.clipsToBounds = true
         
-        if let imageData = NSData(contentsOf: url!) as? Data{
-            cell.profImage.image = UIImage(data: imageData)
-        }else{
-            print("no image data")
-        }
+//        if let imageData = NSData(contentsOf: url!) as? Data{
+//            cell.profImage.image = UIImage(data: imageData)
+//        }else{
+//            print("no image data")
+//        }
 
         
         
@@ -195,6 +197,10 @@ class MessagesTableViewController: UITableViewController {
         if let refHandle = channelRefHandle {
             channelRef.removeObserver(withHandle: refHandle)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85.0
     }
 
     /*
