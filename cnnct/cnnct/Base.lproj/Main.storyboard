@@ -231,7 +231,22 @@
                     <view key="view" contentMode="scaleToFill" id="UiV-oB-U5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oJM-Z1-8Dv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aoo-qa-HPI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90744791670000002" green="0.90744791670000002" blue="0.90744791670000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oJM-Z1-8Dv" firstAttribute="top" secondItem="4Hp-zf-wJ9" secondAttribute="bottom" constant="38" id="8kc-Sp-uU5"/>
+                            <constraint firstItem="oJM-Z1-8Dv" firstAttribute="centerX" secondItem="UiV-oB-U5g" secondAttribute="centerX" id="9Kc-K0-fkQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oJM-Z1-8Dv" secondAttribute="trailing" constant="4" id="cdW-da-N2Z"/>
+                            <constraint firstItem="oJM-Z1-8Dv" firstAttribute="leading" secondItem="UiV-oB-U5g" secondAttribute="leadingMargin" constant="4" id="fge-3k-out"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Wq-6m-UAX">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="f11-NK-4tq">
@@ -240,6 +255,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="eventName" destination="oJM-Z1-8Dv" id="H6A-vS-K31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcN-5z-9Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
