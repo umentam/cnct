@@ -26,14 +26,11 @@ class CreateEventViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
         
         var ref:FIRDatabaseReference!
-//        var buttonItem = self.navigationController?.navigationItem.leftBarButtonItem
-//        
-//        buttonItem.addTarget(self, action: #selector(goBack), forControlEvents: UIControlEvents.TouchUpInside)
         }
     
-    func goBack(){
-        
-        print("he wants to go back")
+    
+    @IBAction func goBackToProfile(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil);
     }
     
     override func didReceiveMemoryWarning() {
