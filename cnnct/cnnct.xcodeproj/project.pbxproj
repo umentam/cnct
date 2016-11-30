@@ -14,6 +14,7 @@
 		8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFD1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m */; };
 		8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */; };
 		C750FED91DECE920009BD840 /* PeoplePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */; };
+		C750FEDB1DECF4B7009BD840 /* myInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */; };
 		C76B85E81DD81FF300981D08 /* user-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B85E71DD81FF300981D08 /* user-outline.png */; };
 		C78E95C71DEBA16B0038D3AA /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */; };
 		C78E95C91DEBA40B0038D3AA /* CnctConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */; };
@@ -94,6 +95,7 @@
 		8E092BFE1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCMLPAutoCompleteDemoViewController.h; sourceTree = "<group>"; };
 		8E092BFF1DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCMLPAutoCompleteDemoViewController.m; sourceTree = "<group>"; };
 		C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeoplePageTableViewCell.xib; sourceTree = "<group>"; };
+		C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myInterestsViewController.swift; sourceTree = "<group>"; };
 		C76B85E71DD81FF300981D08 /* user-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-outline.png"; sourceTree = "<group>"; };
 		C78E95C61DEBA16B0038D3AA /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		C78E95C81DEBA40B0038D3AA /* CnctConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CnctConstants.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				C78E95CA1DEBA8280038D3AA /* HomefeedViewController.swift */,
 				C7908AAC1DECCB14007F9BE4 /* UIFont+Zeplin.swift */,
 				C750FED71DECE920009BD840 /* PeoplePageTableViewCell.xib */,
+				C750FEDA1DECF4B7009BD840 /* myInterestsViewController.swift */,
 			);
 			path = cnnct;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				8E092C021DD7E02D00C6083C /* GPCMLPAutoCompleteDemoAppDelegate.m in Sources */,
 				C78E95C91DEBA40B0038D3AA /* CnctConstants.swift in Sources */,
 				C78E95C71DEBA16B0038D3AA /* CAPSPageMenu.swift in Sources */,
+				C750FEDB1DECF4B7009BD840 /* myInterestsViewController.swift in Sources */,
 				C7908A911DECB392007F9BE4 /* TabItem.swift in Sources */,
 				8E092BC71DD78F3400C6083C /* NSString+Levenshtein.m in Sources */,
 				8E092C031DD7E02D00C6083C /* GPCMLPAutoCompleteDemoViewController.m in Sources */,

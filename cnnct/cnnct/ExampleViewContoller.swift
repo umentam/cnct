@@ -22,6 +22,7 @@ class ExampleViewContoller: ColorMatchTabsViewController {
         dataSource = self
         reloadData()
         
+        
         self.extendedLayoutIncludesOpaqueBars = true;
         self.edgesForExtendedLayout = [];
         self.navigationController?.navigationBar.isTranslucent = false;

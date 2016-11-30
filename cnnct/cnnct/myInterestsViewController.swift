@@ -1,8 +1,8 @@
 //
-//  FirstViewController.swift
+//  mySampleViewController.swift
 //  cnnct
 //
-//  Created by Anthony Wamunyu Maina on 11/11/16.
+//  Created by Anthony Wamunyu Maina on 11/28/16.
 //  Copyright © 2016 Anthony Wamunyu Maina. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import Firebase
 import FirebaseAuth
 import FBSDKCoreKit
 
-class InterestsViewController: UIViewController {
-    
+class myInterestsViewController: UIViewController {
+
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var tagListView: UIView!
     var newTagListView:TagListView!
@@ -22,30 +22,18 @@ class InterestsViewController: UIViewController {
     var prefTags = [String]()
     var ref:FIRDatabaseReference!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRDatabase.database().reference()
         self.extendedLayoutIncludesOpaqueBars = true;
         self.edgesForExtendedLayout = [];
-        
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
         // Do any additional setup after loading the view.
-        newTagListView = TagListView(frame: CGRect(0, 0 , self.view.frame.size.width,tagListView.frame.size.height))
+        newTagListView = TagListView(frame: CGRect(tagListView.frame.minY, tagListView.frame.minX , tagListView.frame.size.width,tagListView.frame.size.height))
         self.view.addSubview(newTagListView)
         newTagListView.backgroundColor = UIColor.white
         newTagListView.layer.borderColor = UIColor.white.cgColor
         newTagListView.layer.borderWidth = 0.2
         
         updateButton.backgroundColor = UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0)
-        updateButton.layer.cornerRadius = updateButton.frame.size.height / 2;
-        
-        //updateButton.isHidden = true
-        updateButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        //updateButton.titleLabel?.font = UIFont.cellTitleFont()
-        
         //updateButton.setImage(UIImage(named: "update"), for: UIControlState.normal)
         
         
@@ -92,7 +80,7 @@ class InterestsViewController: UIViewController {
             }
         })
     }
-    
+
     //Method to ensure you have deselected.
     func getRandomColor() -> UIColor  {
         let randomNumber = Int(arc4random_uniform(5) + 1)
@@ -117,22 +105,18 @@ class InterestsViewController: UIViewController {
         
     }
     
-   
+    
     @IBAction func updateClicked(_ sender: Any) {
-        
-       // ExampleViewContoller().selectItem(at: 1)
-//        myCont.selectItem(at:0);
-        
         if !(mainSet.isEmpty) {
             let preferences = mainSet
             
             //let userCurrent = FBSDKAccessToken.current()
             let userID = FIRAuth.auth()?.currentUser?.uid
             
-//            for object in self.tagsDict {
-//                self.ref.child("Events").child(self.eventID).child("eventTags").updateChildValues([object:true])
-//                
-//            }
+            //            for object in self.tagsDict {
+            //                self.ref.child("Events").child(self.eventID).child("eventTags").updateChildValues([object:true])
+            //
+            //            }
             
             for object in preferences {
                 self.ref.child("Users").child(userID!).child("preferences").updateChildValues([object:true])
@@ -142,7 +126,7 @@ class InterestsViewController: UIViewController {
             self.present(myAlertController, animated: true, completion: { () -> Void in
                 myAlertController.dismiss(animated: true, completion:nil)
             })
-
+            
         }
         else {
             let alertController = UIAlertController(title: "Hi :)", message:
@@ -151,7 +135,7 @@ class InterestsViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         
-            }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -162,16 +146,6 @@ class InterestsViewController: UIViewController {
     
     func tap (sender:UITapGestureRecognizer)
     {
-        //updateButton.isHidden = false
-        UIView.animate(withDuration: 0.5,
-                       delay: 0,
-                       usingSpringWithDamping: 1.0,
-                       initialSpringVelocity: 6.0,
-                       options: .allowUserInteraction,
-                       animations: { [weak self] in
-                        self?.updateButton.transform = .identity
-            },
-                       completion: nil)
         let label = (sender.view as! UILabel)
         let textToInsert = label.text!
         
@@ -184,6 +158,4 @@ class InterestsViewController: UIViewController {
         }
         
     }
-    
-    
 }
