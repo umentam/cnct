@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
 import FBSDKCoreKit
@@ -19,6 +20,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePicImageView: UIImageView!
     
     @IBOutlet weak var usernameTextView: UITextView!
+    @IBOutlet weak var roleLabel: UILabel!
+    @IBOutlet weak var backgroundTextView: UITextView!
+    
+    var ref:FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +32,26 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.topItem?.title = "Your Profile"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
+        ref = FIRDatabase.database().reference()
         
-        fetchUserInformation()
+        fetchFBUserInformation()
+        fetchFirebaseUserInformation()
     }
     
-    func fetchUserInformation(){
+    func fetchFirebaseUserInformation(){
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let values = snapshot.value as! [String:Any]
+            self.roleLabel.text = (values["role"] as? String)!
+            self.backgroundTextView.text = (values["background"] as? String)!
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func fetchFBUserInformation(){
         
         if((FBSDKAccessToken.current()) != nil){
             
@@ -49,6 +69,7 @@ class ProfileViewController: UIViewController {
                     
                     let data:[String:AnyObject] = result as! [String : AnyObject]
                     self.userName = (data["name"] as? String)!
+                    
                     
                    
                     
