@@ -71,10 +71,9 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
-  - ColorMatchTabs (from `../`)
+  - ColorMatchTabs (~> 2.0)
   - Firebase
   - Firebase/Auth
   - Firebase/Crash
@@ -82,11 +81,6 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - JSQMessagesViewController
-  - SwiftGifOrigin
-
-EXTERNAL SOURCES:
-  ColorMatchTabs:
-    :path: "../"
 
 SPEC CHECKSUMS:
   ColorMatchTabs: d66f857e49d00d9fe956b930d0ac78f4b1172f54
@@ -105,8 +99,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
-  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: 65985b5fdd792ed63beef21e0c38a3861bf3007e
+PODFILE CHECKSUM: 1d81a4c945bfef5155a0237fc900d561996811a8
 
 COCOAPODS: 1.1.1
