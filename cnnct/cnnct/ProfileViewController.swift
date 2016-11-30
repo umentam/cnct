@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     
     var userName : String = ""
     @IBOutlet weak var profilePicImageView: UIImageView!
-    
+    @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var usernameTextView: UITextView!
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var backgroundTextView: UITextView!
@@ -32,6 +32,7 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.topItem?.title = "Your Profile"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 2.0/255.0, green: 208.0/255.0, blue: 172.0/255.0, alpha: 1.0),NSFontAttributeName:UIFont.systemFont(ofSize: 25, weight: UIFontWeightLight)]
+        createEventButton.layer.cornerRadius = 8.0
         ref = FIRDatabase.database().reference()
         
         fetchFBUserInformation()
@@ -94,6 +95,10 @@ class ProfileViewController: UIViewController {
                 }
             })
         }
+    }
+    
+    @IBAction func createEvent(_ sender: AnyObject) {
+        print("THE USER IS TRYING TO CREATE AN EVENT!!!")
     }
     
     override func didReceiveMemoryWarning() {

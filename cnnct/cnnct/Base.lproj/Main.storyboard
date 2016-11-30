@@ -165,16 +165,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5n-fc-GG0">
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="9Fa-6U-lX0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createEvent:" destination="TTg-a9-GaV" eventType="touchUpInside" id="NNf-vg-t4T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="F5n-fc-GG0" firstAttribute="top" secondItem="XQf-85-xTJ" secondAttribute="bottom" constant="297" id="0Sr-X7-pKN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F5n-fc-GG0" secondAttribute="trailing" constant="92" id="5gI-vV-e0f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kag-XA-3ed" secondAttribute="trailing" constant="13" id="Evd-FB-G4A"/>
                             <constraint firstItem="Dfu-ap-exC" firstAttribute="centerX" secondItem="H12-K6-HZt" secondAttribute="centerX" id="Jbk-eE-zXn"/>
+                            <constraint firstItem="F5n-fc-GG0" firstAttribute="centerX" secondItem="H12-K6-HZt" secondAttribute="centerX" id="Jls-FT-9we"/>
                             <constraint firstItem="Dfu-ap-exC" firstAttribute="top" secondItem="XQf-85-xTJ" secondAttribute="bottom" constant="222" id="XES-0t-1jM"/>
                             <constraint firstItem="Dfu-ap-exC" firstAttribute="leading" secondItem="H12-K6-HZt" secondAttribute="leadingMargin" constant="12" id="dwj-Tq-tIX"/>
                             <constraint firstItem="kag-XA-3ed" firstAttribute="top" secondItem="XQf-85-xTJ" secondAttribute="bottom" constant="241" id="neF-GY-vPL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dfu-ap-exC" secondAttribute="trailing" constant="13" id="oey-le-BKt"/>
+                            <constraint firstItem="F5n-fc-GG0" firstAttribute="leading" secondItem="H12-K6-HZt" secondAttribute="leadingMargin" constant="92" id="vYJ-m2-iEY"/>
                             <constraint firstItem="kag-XA-3ed" firstAttribute="leading" secondItem="H12-K6-HZt" secondAttribute="leadingMargin" constant="12" id="vnJ-ds-r7e"/>
                             <constraint firstItem="kag-XA-3ed" firstAttribute="centerX" secondItem="H12-K6-HZt" secondAttribute="centerX" id="wuo-Et-DPv"/>
                         </constraints>
@@ -188,6 +205,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundTextView" destination="kag-XA-3ed" id="JpQ-GH-X6w"/>
+                        <outlet property="createEventButton" destination="F5n-fc-GG0" id="MNv-UW-4Fd"/>
                         <outlet property="profilePicImageView" destination="yDS-GQ-2lH" id="yz7-xD-D1U"/>
                         <outlet property="roleLabel" destination="Dfu-ap-exC" id="bN8-v8-J8x"/>
                         <outlet property="usernameTextView" destination="z87-bU-4bP" id="ZQm-cg-cj7"/>
