@@ -176,7 +176,6 @@
                                 </state>
                                 <connections>
                                     <action selector="createEvent:" destination="TTg-a9-GaV" eventType="touchUpInside" id="NNf-vg-t4T"/>
-                                    <segue destination="PcK-Kj-u8d" kind="show" identifier="createEvent" id="56r-Zh-TOv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -229,13 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Wq-6m-UAX">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="f97-dM-KIh">
-                            <connections>
-                                <segue destination="ZEE-8k-trw" kind="show" id="mCK-OB-iWY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="1Wq-6m-UAX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcN-5z-9Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -785,7 +778,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mvv-Vr-KWY"/>
-        <segue reference="mCK-OB-iWY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0078431372550000003" green="0.81568627449999997" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
 </document>

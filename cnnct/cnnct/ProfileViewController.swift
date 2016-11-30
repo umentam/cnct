@@ -99,11 +99,17 @@ class ProfileViewController: UIViewController {
     
     @IBAction func createEvent(_ sender: AnyObject) {
         print("THE USER IS TRYING TO CREATE AN EVENT!!!")
+//        let controller = CreateEventViewController()
+//        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func signOut(_ sender: Any) {
