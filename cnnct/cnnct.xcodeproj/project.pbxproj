@@ -55,6 +55,7 @@
 		DD9B7F3D1DD7ADA20011A589 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */; };
 		DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */; };
 		DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */; };
+		DDC127CA1DEE91B3007EDD60 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC127C91DEE91B3007EDD60 /* CreateEventViewController.swift */; };
 		DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DDEB62301DD6E8A400B3DA4A /* Podfile */; };
 		FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cnnct.entitlements; sourceTree = "<group>"; };
 		DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDC127C91DEE91B3007EDD60 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 		C7D41DA51DD6E221008D0402 /* cnnct */ = {
 			isa = PBXGroup;
 			children = (
+				DDC127C91DEE91B3007EDD60 /* CreateEventViewController.swift */,
 				C750FED51DECE7AE009BD840 /* TabBarDocs */,
 				DD02EE8A1DD8584C00EED5C2 /* Messages */,
 				8E092BF81DD7E02D00C6083C /* SearchAutoCompleteObject.h */,
@@ -589,6 +592,7 @@
 				C7908AA11DECC7BC007F9BE4 /* ExampleTableViewCell.swift in Sources */,
 				DD02EE891DD81E1F00EED5C2 /* MessagesTableViewCell.swift in Sources */,
 				C7D41DAB1DD6E221008D0402 /* PeopleViewController.swift in Sources */,
+				DDC127CA1DEE91B3007EDD60 /* CreateEventViewController.swift in Sources */,
 				C7D41DA71DD6E221008D0402 /* AppDelegate.swift in Sources */,
 				8E092C001DD7E02D00C6083C /* SearchAutoCompleteObject.m in Sources */,
 				C7908A941DECB3E7007F9BE4 /* ControllersProvider.swift in Sources */,
