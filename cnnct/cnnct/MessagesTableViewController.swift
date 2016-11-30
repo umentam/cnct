@@ -113,8 +113,15 @@ class MessagesTableViewController: UITableViewController {
 //    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("I was touched!")
         performSegue(withIdentifier: "gotoChatSegue", sender: self)
+//        var destination = ChatViewController()
+//        destination.sendeeDisplayName = sendeeDisplayName
+//        destination.displayName = displayName
+//        print("This is the displayname")
+//        print(displayName)
+//        destination.userID = userID
+//        destination.channelRef = channelRef
+//        self.present(destination, animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -171,22 +178,22 @@ class MessagesTableViewController: UITableViewController {
         var item : FIRDataSnapshot
         item = self.attendees[indexPath.row]
         
-        //var facebookProfileUrl = (item.childSnapshot(forPath: "facebookProfileUrl").value as! String)
+        var facebookProfileUrl = (item.childSnapshot(forPath: "facebookProfileUrl").value as! String)
         
         //cell.orgNameLabel?.text = (item.value!["orgName"] as? String)
         sendeeDisplayName = (item.childSnapshot(forPath: "name").value as! String)
         cell.fullName?.text = sendeeDisplayName
         cell.roleLabel?.text = (item.childSnapshot(forPath: "role").value as! String)
         cell.lastMessage?.text = lastMessage
-        //let url = URL(string: facebookProfileUrl)
+        let url = URL(string: facebookProfileUrl)
         cell.profIMage.layer.cornerRadius = cell.profIMage.frame.size.width / 2
         cell.profIMage.clipsToBounds = true
         
-//        if let imageData = NSData(contentsOf: url!) as? Data{
-//            cell.profIMage.image = UIImage(data: imageData)
-//        }else{
-//            print("no image data")
-//        }
+        if let imageData = NSData(contentsOf: url!) as? Data{
+            cell.profIMage.image = UIImage(data: imageData)
+        }else{
+            print("no image data")
+        }
 
         
         
