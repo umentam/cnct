@@ -114,6 +114,7 @@ class MessagesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "gotoChatSegue", sender: self)
+        //performSegue(withIdentifier: "chatter", sender: self)
 //        var destination = ChatViewController()
 //        destination.sendeeDisplayName = sendeeDisplayName
 //        destination.displayName = displayName
@@ -126,14 +127,15 @@ class MessagesTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoChatSegue" {
-            if let destination = segue.destination as? ChatViewController {
-                destination.sendeeDisplayName = sendeeDisplayName
-                destination.displayName = displayName
-                print("This is the displayname")
-                print(displayName)
-                destination.userID = userID
-                destination.channelRef = channelRef
-            }
+            print("it worked")
+//            if let destination = segue.destination as? ChatViewController {
+//                destination.sendeeDisplayName = sendeeDisplayName
+//                destination.displayName = displayName
+//                print("This is the displayname")
+//                print(displayName)
+//                destination.userID = userID
+//                destination.channelRef = channelRef
+//            }
         }
     }
     

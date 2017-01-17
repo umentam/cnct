@@ -55,6 +55,7 @@
 		DD9B7F3D1DD7ADA20011A589 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B7F3A1DD7ADA20011A589 /* Bolts.framework */; };
 		DD9B7F421DD7FFDC0011A589 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */; };
 		DDA32ED81DD6E70400AA722A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */; };
+		DDBCE1EE1E2D8DC900767CE5 /* ChatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCE1ED1E2D8DC900767CE5 /* ChatterViewController.swift */; };
 		DDC127CA1DEE91B3007EDD60 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC127C91DEE91B3007EDD60 /* CreateEventViewController.swift */; };
 		DDEB62311DD6E8A400B3DA4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DDEB62301DD6E8A400B3DA4A /* Podfile */; };
 		FD819458F78B3FC71A852972 /* Pods_cnnct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5F82390944BE6D78CB6168 /* Pods_cnnct.framework */; };
@@ -146,6 +147,7 @@
 		DD9B7F3E1DD7B9A80011A589 /* cnnct.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cnnct.entitlements; sourceTree = "<group>"; };
 		DD9B7F411DD7FFDC0011A589 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		DDA32ED71DD6E70400AA722A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDBCE1ED1E2D8DC900767CE5 /* ChatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatterViewController.swift; sourceTree = "<group>"; };
 		DDC127C91DEE91B3007EDD60 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		DDEB62301DD6E8A400B3DA4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E916E6140FB2F5AB00AFA72F /* Pods_cnnctTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnnctTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,6 +378,7 @@
 				DD02EE861DD81E0400EED5C2 /* MessagesTableViewController.swift */,
 				DD02EE881DD81E1F00EED5C2 /* MessagesTableViewCell.swift */,
 				DD02EE8B1DD8588300EED5C2 /* ChatViewController.swift */,
+				DDBCE1ED1E2D8DC900767CE5 /* ChatterViewController.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBCE1EE1E2D8DC900767CE5 /* ChatterViewController.swift in Sources */,
 				C7908A9A1DECC52E007F9BE4 /* StubContentTableViewController.swift in Sources */,
 				C78E95CB1DEBA8280038D3AA /* HomefeedViewController.swift in Sources */,
 				C7908AAD1DECCB14007F9BE4 /* UIFont+Zeplin.swift in Sources */,
