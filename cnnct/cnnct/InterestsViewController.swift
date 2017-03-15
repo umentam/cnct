@@ -55,39 +55,45 @@ class InterestsViewController: UIViewController {
         eventTagsQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
             for rest in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 //eventID = rest.key
-                let newQuery = self.ref.child("Events").child(rest.key).child("eventTags")
-                newQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
-                    self.tagsDict = snapshot.value as! [String : Int]
+                print (rest.key)
+                if (rest.key == "-KfFBuFfhV83rwn4fMd8") {
                     
-                    for newRest in snapshot.children.allObjects as! [FIRDataSnapshot] {
-                        self.prefTags.append(newRest.key)
-                    }
-                    for (index,i) in self.prefTags.enumerated()
-                    {
-                        let color:UIColor!
-                        if index%4 == 1
-                        {
-                            color = UIColor(red: 238/255, green: 101/255, blue: 107/255, alpha: 1)
-                        }
-                        else if index%4 == 2
-                        {
-                            color = UIColor(red: 96/255, green: 95/255, blue: 132/255, alpha: 1)
-                        }
-                        else if index%4 == 3
-                        {
-                            color = UIColor(red: 85/255, green: 152/255, blue: 158/255, alpha: 1)
-                        }
-                        else
-                        {
-                            color = UIColor(red: 184/255, green: 205/255, blue: 158/255, alpha: 1)
-                        }
-                        let finalText = self.tagsDict[i]
+                    let newQuery = self.ref.child("Events").child(rest.key).child("eventTags")
+                    newQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
+                        self.tagsDict = snapshot.value as! [String : Int]
+                        print(self.tagsDict)
                         
-                        let mainText = " \(i) (\(finalText!))"
-                        self.newTagListView.addTag(text: mainText, target: self, tapAction: #selector(self.tap(sender:)), backgroundColor: color, textColor: UIColor.white)
-                        
-                    }
-                })
+                        for newRest in snapshot.children.allObjects as! [FIRDataSnapshot] {
+                            self.prefTags.append(newRest.key)
+                        }
+                        for (index,i) in self.prefTags.enumerated()
+                        {
+                            let color:UIColor!
+                            if index%4 == 1
+                            {
+                                color = UIColor(red: 238/255, green: 101/255, blue: 107/255, alpha: 1)
+                            }
+                            else if index%4 == 2
+                            {
+                                color = UIColor(red: 96/255, green: 95/255, blue: 132/255, alpha: 1)
+                            }
+                            else if index%4 == 3
+                            {
+                                color = UIColor(red: 85/255, green: 152/255, blue: 158/255, alpha: 1)
+                            }
+                            else
+                            {
+                                color = UIColor(red: 184/255, green: 205/255, blue: 158/255, alpha: 1)
+                            }
+                            
+                            let finalText = self.tagsDict[i]
+                            
+                            let mainText = " \(i) (\(finalText!))"
+                            self.newTagListView.addTag(text: mainText, target: self, tapAction: #selector(self.tap(sender:)), backgroundColor: color, textColor: UIColor.white)
+                        }
+                    })
+                }
+                
                 
             }
         })
