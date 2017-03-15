@@ -52,13 +52,11 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
     public func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if let error = error {
             print(error.localizedDescription)
-            print("Had an error loggin in")
             return
         }
         let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-            // ...
-            print("Logged in successfully!")
+            // ..
             
             let defaults = UserDefaults.standard
             if(defaults.bool(forKey: "hasSignedUp")){
@@ -80,12 +78,9 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
                         var data = result as! [String:Any]
                         var fbID = data["id"]!
                         let facebookProfileUrl = "https://graph.facebook.com/\(fbID)/picture?type=large"
-                        print(data)
-                        print("printing the fb data")
                         self?.ref.child("Users").child((user?.uid)!).updateChildValues(["name": data["name"]!, "email": data["email"]!, "facebookID": fbID, "facebookProfileUrl": facebookProfileUrl])
                         let defaults = UserDefaults.standard
                         defaults.set(true, forKey: "hasSignedUp")
-                        
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SkillsViewController") as UIViewController
                         let navController = UINavigationController(rootViewController: viewController)
                         self?.present(navController, animated: true, completion: nil)

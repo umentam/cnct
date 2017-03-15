@@ -57,7 +57,6 @@ class InterestsViewController: UIViewController {
                 //eventID = rest.key
                 print (rest.key)
                 if (rest.key == "-KfFBuFfhV83rwn4fMd8") {
-                    
                     let newQuery = self.ref.child("Events").child(rest.key).child("eventTags")
                     newQuery.queryOrderedByKey().observeSingleEvent(of: FIRDataEventType.value, with: {(snapshot) in
                         self.tagsDict = snapshot.value as! [String : Int]
