@@ -110,8 +110,10 @@ class PeopleTableViewController: UITableViewController {
         let enumerator = item.childSnapshot(forPath: "preferences").children
         
         while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+            let uneditedText = rest.key
+            let splitText = uneditedText.components(separatedBy:"(")
             
-            interestArray +=  rest.key + ", "
+            interestArray +=  splitText[0] + ", "
         }
         //interestArray.remove(at: interestArray.endIndex.predecessor())
         cell.Interests?.text = String(interestArray.characters.dropLast())
