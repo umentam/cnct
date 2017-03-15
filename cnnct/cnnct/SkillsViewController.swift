@@ -37,13 +37,11 @@ class SkillsViewController: UIViewController {
     @IBAction func gotoSearch(_ sender: AnyObject) {
         print("he wants to perform a segue")
         let role = roleField.text
-        let background = backgroundField.text
         let needs = needsField.text
         
         
         let userID = FIRAuth.auth()?.currentUser?.uid
         self.ref.child("Users").child(userID!).child("role").setValue(role)
-        self.ref.child("Users").child(userID!).child("background").setValue(background)
         self.ref.child("Users").child(userID!).child("needs").setValue(needs)
         
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as UIViewController
