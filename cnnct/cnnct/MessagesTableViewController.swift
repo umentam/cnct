@@ -113,7 +113,8 @@ class MessagesTableViewController: UITableViewController {
 //    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "gotoChatSegue", sender: self)
+        print("I was touched")
+//        /performSegue(withIdentifier: "gotoChatSegue", sender: self)
         //performSegue(withIdentifier: "chatter", sender: self)
 //        var destination = ChatViewController()
 //        destination.sendeeDisplayName = sendeeDisplayName
